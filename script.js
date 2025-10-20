@@ -36,6 +36,12 @@ const translations = {
         moreThan30: "Más de $30",
         applyFilters: "Aplicar Filtros",
         
+        // Categorías específicas
+        categoriesAccesorios: "Accesorios",
+        categoriesMochilas: "Mochilas",
+        categoriesEscolar: "Escolar",
+        categoriesViaje: "Viaje",
+        
         // Productos
         addToCart: "Agregar al Carrito",
         viewDetails: "Ver Detalles",
@@ -64,10 +70,14 @@ const translations = {
         saveChanges: "Guardar Cambios",
         noOrders: "No tienes pedidos recientes.",
         noAddresses: "No hay direcciones guardadas.",
+        settingsDescription: "Aquí puedes configurar tus preferencias.",
         
         // Footer
         quickLinks: "Enlaces Rápidos",
         contact: "Contacto",
+        contactEmail: "Email: info@moonsun.com",
+        contactPhone: "Teléfono: +1 234 567 890",
+        contactAddress: "Dirección: Calle Principal 123, Ciudad",
         rights: "Todos los derechos reservados.",
         
         // Notificaciones
@@ -81,7 +91,14 @@ const translations = {
         loginRequired: "Por favor, inicia sesión para continuar con la compra",
         passwordMismatch: "Las contraseñas no coinciden",
         completeFields: "Por favor, completa todos los campos",
-        filtersApplied: "Filtros aplicados: productos encontrados"
+        filtersApplied: "Filtros aplicados: productos encontrados",
+        
+        // Modal de producto
+        productFeatures: "Características del Producto",
+        close: "Cerrar",
+        highQuality: "Material de alta calidad y durabilidad",
+        exclusiveDesign: "Diseño exclusivo Moon & Sun",
+        satisfactionGuarantee: "Garantía de satisfacción"
     },
     en: {
         // Navigation
@@ -119,6 +136,12 @@ const translations = {
         moreThan30: "More than $30",
         applyFilters: "Apply Filters",
         
+        // Specific categories
+        categoriesAccesorios: "Accessories",
+        categoriesMochilas: "Backpacks",
+        categoriesEscolar: "School",
+        categoriesViaje: "Travel",
+        
         // Products
         addToCart: "Add to Cart",
         viewDetails: "View Details",
@@ -147,10 +170,14 @@ const translations = {
         saveChanges: "Save Changes",
         noOrders: "You have no recent orders.",
         noAddresses: "No saved addresses.",
+        settingsDescription: "Here you can configure your preferences.",
         
         // Footer
         quickLinks: "Quick Links",
         contact: "Contact",
+        contactEmail: "Email: info@moonsun.com",
+        contactPhone: "Phone: +1 234 567 890",
+        contactAddress: "Address: Main Street 123, City",
         rights: "All rights reserved.",
         
         // Notifications
@@ -164,91 +191,118 @@ const translations = {
         loginRequired: "Please log in to continue with your purchase",
         passwordMismatch: "Passwords do not match",
         completeFields: "Please complete all fields",
-        filtersApplied: "Filters applied: products found"
+        filtersApplied: "Filters applied: products found",
+        
+        // Product Modal
+        productFeatures: "Product Features",
+        close: "Close",
+        highQuality: "High quality and durable material",
+        exclusiveDesign: "Exclusive Moon & Sun design",
+        satisfactionGuarantee: "Satisfaction guarantee"
     }
 };
 
-// Datos de productos actualizados para Moon & Sun
+// Datos de productos actualizados para Moon & Sun - Traducidos
 const products = [
     { 
         id: 1, 
         name: "Bolso de mano para Caballero", 
+        name_en: "Men's Handbag",
         price: 34.99, 
         category: "Accesorios", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Estilo elegante de cuero con diseño compacto y enrollo. Perfecto para uso diario y ocasiones especiales."
+        description: "Estilo elegante de cuero con diseño compacto y enrollo. Perfecto para uso diario y ocasiones especiales.",
+        description_en: "Elegant leather style with compact roll-up design. Perfect for daily use and special occasions."
     },
     { 
         id: 2, 
         name: "Bolso de mano Elegante", 
+        name_en: "Elegant Handbag",
         price: 26.99, 
         category: "Accesorios", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Estilo elegante de cuero con diseño compacto y enrollo. Ideal para damas que buscan sofisticación."
+        description: "Estilo elegante de cuero con diseño compacto y enrollo. Ideal para damas que buscan sofisticación.",
+        description_en: "Elegant leather style with compact roll-up design. Ideal for ladies seeking sophistication."
     },
     { 
         id: 3, 
         name: "Mochila Estilo Juvenil", 
+        name_en: "Youth Style Backpack",
         price: 26.99, 
         category: "Mochilas", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Mochila juvenil moderna y compacta con múltiples compartimentos. Resistente y funcional."
+        description: "Mochila juvenil moderna y compacta con múltiples compartimentos. Resistente y funcional.",
+        description_en: "Modern and compact youth backpack with multiple compartments. Durable and functional."
     },
     { 
         id: 4, 
         name: "Bolso estilo Cosmético", 
+        name_en: "Cosmetic Style Bag",
         price: 10.50, 
         category: "Accesorios", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Estuche compacto con múltiples compartimentos, ideal para cosméticos y artículos de belleza."
+        description: "Estuche compacto con múltiples compartimentos, ideal para cosméticos y artículos de belleza.",
+        description_en: "Compact case with multiple compartments, ideal for cosmetics and beauty items."
     },
     { 
         id: 5, 
         name: "Mochila Spider-Man", 
+        name_en: "Spider-Man Backpack",
         price: 25.60, 
         category: "Mochilas", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Mochila escolar, cómoda, resistente y con múltiples espacios. Diseño Spider-Man para fans."
+        description: "Mochila escolar, cómoda, resistente y con múltiples espacios. Diseño Spider-Man para fans.",
+        description_en: "School backpack, comfortable, durable and with multiple spaces. Spider-Man design for fans."
     },
     { 
         id: 6, 
         name: "Mochila Deportiva", 
+        name_en: "Sports Backpack",
         price: 29.99, 
         category: "Mochilas", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Mochila ideal para deportes con compartimentos especializados para equipo y ropa."
+        description: "Mochila ideal para deportes con compartimentos especializados para equipo y ropa.",
+        description_en: "Ideal backpack for sports with specialized compartments for equipment and clothing."
     },
     { 
         id: 7, 
         name: "Lonchera Térmica", 
+        name_en: "Thermal Lunch Box",
         price: 15.99, 
         category: "Escolar", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Lonchera térmica para mantener la temperatura de tus alimentos durante horas."
+        description: "Lonchera térmica para mantener la temperatura de tus alimentos durante horas.",
+        description_en: "Thermal lunch box to maintain your food temperature for hours."
     },
     { 
         id: 8, 
         name: "Estuche Escolar", 
+        name_en: "School Pencil Case",
         price: 8.99, 
         category: "Escolar", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Estuche espacioso para guardar todos tus útiles escolares de manera organizada."
+        description: "Estuche espacioso para guardar todos tus útiles escolares de manera organizada.",
+        description_en: "Spacious case to store all your school supplies in an organized way."
     },
     { 
         id: 9, 
         name: "Cartera de Viaje", 
+        name_en: "Travel Wallet",
         price: 32.99, 
         category: "Viaje", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Cartera segura con múltiples compartimentos para documentos y dinero durante tus viajes."
+        description: "Cartera segura con múltiples compartimentos para documentos y dinero durante tus viajes.",
+        description_en: "Secure wallet with multiple compartments for documents and money during your travels."
     },
     { 
         id: 10, 
         name: "Mochila de Viaje", 
+        name_en: "Travel Backpack",
         price: 45.99, 
         category: "Viaje", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
+        description_en: "Spacious backpack perfect for short trips with organized compartments."
     }
 ];
 
@@ -290,6 +344,11 @@ function changeLanguage(lang) {
     
     // Actualizar el título de la página
     document.title = translations[lang].title;
+    
+    // Recargar productos para mostrar nombres y descripciones en el idioma correcto
+    loadFeaturedProducts();
+    loadProducts();
+    updateCartUI();
 }
 
 function applyTranslations() {
@@ -394,6 +453,23 @@ function applyTranslations() {
         el.textContent = t.applyFilters;
     });
     
+    // Actualizar etiquetas de categorías en los filtros
+    document.querySelectorAll('[data-translate="categoriesAccesorios"]').forEach(el => {
+        el.textContent = t.categoriesAccesorios;
+    });
+    
+    document.querySelectorAll('[data-translate="categoriesMochilas"]').forEach(el => {
+        el.textContent = t.categoriesMochilas;
+    });
+    
+    document.querySelectorAll('[data-translate="categoriesEscolar"]').forEach(el => {
+        el.textContent = t.categoriesEscolar;
+    });
+    
+    document.querySelectorAll('[data-translate="categoriesViaje"]').forEach(el => {
+        el.textContent = t.categoriesViaje;
+    });
+    
     // Formularios
     document.querySelectorAll('[data-translate="loginTitle"]').forEach(el => {
         el.textContent = t.loginTitle;
@@ -468,6 +544,10 @@ function applyTranslations() {
         el.textContent = t.noAddresses;
     });
     
+    document.querySelectorAll('[data-translate="settingsDescription"]').forEach(el => {
+        el.textContent = t.settingsDescription;
+    });
+    
     // Footer
     document.querySelectorAll('[data-translate="quickLinks"]').forEach(el => {
         el.textContent = t.quickLinks;
@@ -475,6 +555,18 @@ function applyTranslations() {
     
     document.querySelectorAll('[data-translate="contact"]').forEach(el => {
         el.textContent = t.contact;
+    });
+    
+    document.querySelectorAll('[data-translate="contactEmail"]').forEach(el => {
+        el.textContent = t.contactEmail;
+    });
+    
+    document.querySelectorAll('[data-translate="contactPhone"]').forEach(el => {
+        el.textContent = t.contactPhone;
+    });
+    
+    document.querySelectorAll('[data-translate="contactAddress"]').forEach(el => {
+        el.textContent = t.contactAddress;
     });
     
     document.querySelectorAll('[data-translate="rights"]').forEach(el => {
@@ -635,7 +727,7 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-image" style="background-image: url('${product.image}')"></div>
         <div class="product-info">
-            <h3>${product.name}</h3>
+            <h3>${currentLanguage === 'es' ? product.name : product.name_en}</h3>
             <div class="product-price">$${product.price.toFixed(2)}</div>
             <button class="add-to-cart" data-id="${product.id}">${translations[currentLanguage].addToCart}</button>
             <button class="btn view-product" style="margin-top: 0.5rem; width: 100%; background-color: var(--primary-color); color: white;" data-id="${product.id}">${translations[currentLanguage].viewDetails}</button>
@@ -665,27 +757,27 @@ function showProductDetails(productId) {
     modalContent.innerHTML = `
         <div class="modal-product-container">
             <div class="modal-product-image">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${currentLanguage === 'es' ? product.name : product.name_en}">
             </div>
             <div class="modal-product-info">
-                <h2>${product.name}</h2>
+                <h2>${currentLanguage === 'es' ? product.name : product.name_en}</h2>
                 <div class="modal-product-price">$${product.price.toFixed(2)}</div>
                 <div class="modal-product-description">
-                    <p>${product.description}</p>
+                    <p>${currentLanguage === 'es' ? product.description : product.description_en}</p>
                 </div>
                 <div class="modal-product-actions">
                     <button class="btn" id="modal-add-to-cart">${translations[currentLanguage].addToCart}</button>
-                    <button class="btn" style="background-color: var(--primary-color); color: white;" id="modal-close-btn">${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Cerrar" : "Close"}</button>
+                    <button class="btn" style="background-color: var(--primary-color); color: white;" id="modal-close-btn">${translations[currentLanguage].close}</button>
                 </div>
             </div>
         </div>
         <div class="modal-product-features">
-            <h3>${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Características del Producto" : "Product Features"}</h3>
+            <h3>${translations[currentLanguage].productFeatures}</h3>
             <ul>
-                <li>${product.description}</li>
-                <li>${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Material de alta calidad y durabilidad" : "High quality and durable material"}</li>
-                <li>${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Diseño exclusivo Moon & Sun" : "Exclusive Moon & Sun design"}</li>
-                <li>${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Garantía de satisfacción" : "Satisfaction guarantee"}</li>
+                <li>${currentLanguage === 'es' ? product.description : product.description_en}</li>
+                <li>${translations[currentLanguage].highQuality}</li>
+                <li>${translations[currentLanguage].exclusiveDesign}</li>
+                <li>${translations[currentLanguage].satisfactionGuarantee}</li>
             </ul>
         </div>
     `;
@@ -746,7 +838,7 @@ function addToCart(productId) {
     updateCartUI();
     
     // Mostrar notificación
-    showNotification(`${product.name} ${translations[currentLanguage].addedToCart}`);
+    showNotification(`${currentLanguage === 'es' ? product.name : product.name_en} ${translations[currentLanguage].addedToCart}`);
     
     // Mostrar sección del carrito
     showSection('carrito');
@@ -777,7 +869,7 @@ function updateCartUI() {
         cartItem.innerHTML = `
             <div class="cart-item-image" style="background-image: url('${item.product.image}')"></div>
             <div class="cart-item-details">
-                <div class="cart-item-title">${item.product.name}</div>
+                <div class="cart-item-title">${currentLanguage === 'es' ? item.product.name : item.product.name_en}</div>
                 <div class="cart-item-price">$${item.product.price.toFixed(2)}</div>
             </div>
             <div class="cart-item-quantity">
@@ -786,7 +878,7 @@ function updateCartUI() {
                 <button class="quantity-btn increase" data-id="${item.product.id}">+</button>
             </div>
             <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
-            <button class="remove-item" data-id="${item.product.id}">Eliminar</button>
+            <button class="remove-item" data-id="${item.product.id}">${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Eliminar" : "Remove"}</button>
         `;
         
         cartItemsContainer.appendChild(cartItem);
@@ -843,7 +935,7 @@ function removeFromCart(productId) {
     if (item) {
         cart = cart.filter(item => item.product.id !== parseInt(productId));
         updateCartUI();
-        showNotification(`${item.product.name} ${translations[currentLanguage].removedFromCart}`);
+        showNotification(`${currentLanguage === 'es' ? item.product.name : item.product.name_en} ${translations[currentLanguage].removedFromCart}`);
     }
 }
 
