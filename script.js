@@ -1136,5 +1136,18 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
+// ===== SCRIPT PARA ABRIR/CERRAR EL MENÚ =====
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
+    }
+});
+
 // ===== INICIALIZAR LA APLICACIÓN =====
 document.addEventListener('DOMContentLoaded', init);

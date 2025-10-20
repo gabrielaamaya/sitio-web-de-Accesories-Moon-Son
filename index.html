@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon & Sun - Accesorios</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Header y Navegación -->
@@ -17,11 +19,18 @@
                     </div>
                     <div class="logo">Moon & Sun</div>
                 </div>
-                <ul class="nav-links">
+                
+                <!-- Botón hamburguesa CORREGIDO -->
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="menu">
                     <li><a href="#" class="nav-link" data-section="inicio" data-translate="inicio">Inicio</a></li>
                     <li><a href="#" class="nav-link" data-section="catalogo" data-translate="catalogo">Catálogo</a></li>
                     <li><a href="#" class="nav-link" data-section="perfil" data-translate="perfil">Perfil</a></li>
                 </ul>
+                
                 <div class="user-actions">
                     <button id="login-btn" data-translate="login">Iniciar Sesión</button>
                     <button id="register-btn" data-translate="register">Crear Cuenta</button>
