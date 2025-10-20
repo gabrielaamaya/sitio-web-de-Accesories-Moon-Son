@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon & Sun - Accesorios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="logo-img">
+                        <img src="logo.jpeg" alt="Moon & Sun Logo">
+                    </div>
+                    <div class="logo">Moon & Sun</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-section="inicio" data-translate="inicio">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-section="catalogo" data-translate="catalogo">Catálogo</a></li>
+                    <li><a href="#" class="nav-link" data-section="perfil" data-translate="perfil">Perfil</a></li>
+                </ul>
+                <div class="user-actions">
+                    <button id="login-btn" data-translate="login">Iniciar Sesión</button>
+                    <button id="register-btn" data-translate="register">Crear Cuenta</button>
+                    <button class="cart-icon" id="cart-btn" data-translate="carrito">
+                        Carrito <span class="cart-count">0</span>
+                    </button>
+                    <!-- SELECTOR DE IDIOMA -->
+                    <div class="language-selector">
+                        <select id="language-select">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="active">
+            <div class="hero">
+                <div>
+                    <h1>Moon & Sun</h1>
+                    <p>Accesorios Moon & Sun</p>
+                </div>
+            </div>
+            
+            <!-- Sección de ofertas especiales -->
+            <div class="promotional-section">
+                <div class="promo-card">
+                    <h2 data-translate="backToSchool">¡REGRESO A CLASES!</h2>
+                    <h3 data-translate="schoolOffers">SUPER OFERTAS EN ACCESORIOS ESCOLARES</h3>
+                    <p data-translate="schoolDiscount">Hasta 50% de Descuento en Mochilas, Loncheras y Estuches</p>
+                </div>
+                
+                <div class="promo-card">
+                    <h2 data-translate="travelOffers">GRANDES OFERTAS EN ACCESORIOS DE VIAJE</h2>
+                    <p data-translate="travelDiscount">Hasta 50% de Descuento en Mochilas, Carteras y Bolsos</p>
+                </div>
+                
+                <div class="promo-card special">
+                    <h2 data-translate="superOffer">¡SUPER OFERTA!</h2>
+                    <h3 data-translate="laverosOffer">¡LAVEROS 2X1!</h3>
+                </div>
+            </div>
+            
+            <h2 class="section-title" data-translate="featured">RECOMENDADOS PARA TI</h2>
+            <div class="featured-products">
+                <!-- Los productos recomendados se cargarán con JavaScript -->
+            </div>
+        </section>
+
+        <!-- Sección Iniciar Sesión -->
+        <section id="iniciar-sesion">
+            <h2 data-translate="loginTitle">Iniciar Sesión</h2>
+            <div class="form-container">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email" data-translate="email">Correo Electrónico</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" data-translate="password">Contraseña</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn" data-translate="login">Iniciar Sesión</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <span data-translate="noAccount">¿No tienes cuenta?</span> <a href="#" id="go-to-register" data-translate="registerHere">Regístrate aquí</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección Crear Cuenta -->
+        <section id="crear-cuenta">
+            <h2 data-translate="registerTitle">Crear Cuenta</h2>
+            <div class="form-container">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name" data-translate="fullName">Nombre Completo</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email" data-translate="email">Correo Electrónico</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password" data-translate="password">Contraseña</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm" data-translate="confirmPassword">Confirmar Contraseña</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <button type="submit" class="btn" data-translate="register">Crear Cuenta</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <span data-translate="haveAccount">¿Ya tienes cuenta?</span> <a href="#" id="go-to-login" data-translate="loginHere">Inicia sesión aquí</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección Catálogo -->
+        <section id="catalogo">
+            <h2 data-translate="catalogTitle">Catálogo de Productos</h2>
+            <div class="catalog-container">
+                <div class="filters">
+                    <h3 data-translate="filters">Filtros</h3>
+                    <div class="filter-group">
+                        <h4 data-translate="categories">Categorías</h4>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-accesorios" value="Accesorios" checked>
+                            <label for="cat-accesorios">Accesorios</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-mochilas" value="Mochilas" checked>
+                            <label for="cat-mochilas">Mochilas</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-escolar" value="Escolar" checked>
+                            <label for="cat-escolar">Escolar</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="cat-viaje" value="Viaje" checked>
+                            <label for="cat-viaje">Viaje</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4 data-translate="price">Precio</h4>
+                        <div class="filter-option">
+                            <input type="radio" id="price-all" name="price" value="all" checked>
+                            <label for="price-all" data-translate="all">Todos</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-low" name="price" value="low">
+                            <label for="price-low" data-translate="lessThan20">Menos de $20</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-medium" name="price" value="medium">
+                            <label for="price-medium" data-translate="between20and30">$20 - $30</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-high" name="price" value="high">
+                            <label for="price-high" data-translate="moreThan30">Más de $30</label>
+                        </div>
+                    </div>
+                    <button id="apply-filters" class="btn" data-translate="applyFilters">Aplicar Filtros</button>
+                </div>
+                <div class="products-grid">
+                    <!-- Los productos se cargarán con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Perfil de Usuario -->
+        <section id="perfil">
+            <h2 data-translate="profileTitle">Perfil de Usuario</h2>
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <ul class="profile-menu">
+                        <li><a href="#" class="profile-tab active" data-tab="info" data-translate="personalInfo">Información Personal</a></li>
+                        <li><a href="#" class="profile-tab" data-tab="orders" data-translate="myOrders">Mis Pedidos</a></li>
+                        <li><a href="#" class="profile-tab" data-tab="addresses" data-translate="addresses">Direcciones</a></li>
+                        <li><a href="#" class="profile-tab" data-tab="settings" data-translate="settings">Configuración</a></li>
+                    </ul>
+                </div>
+                <div class="profile-content">
+                    <div id="profile-info" class="profile-tab-content active">
+                        <h3 data-translate="personalInfo">Información Personal</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="profile-name" data-translate="fullName">Nombre</label>
+                                <input type="text" id="profile-name" value="Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email" data-translate="email">Correo Electrónico</label>
+                                <input type="email" id="profile-email" value="juan@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-phone" data-translate="phone">Teléfono</label>
+                                <input type="tel" id="profile-phone" value="+1 234 567 890">
+                            </div>
+                            <button type="submit" class="btn" data-translate="saveChanges">Guardar Cambios</button>
+                        </form>
+                    </div>
+                    <div id="profile-orders" class="profile-tab-content">
+                        <h3 data-translate="myOrders">Mis Pedidos</h3>
+                        <p data-translate="noOrders">No tienes pedidos recientes.</p>
+                    </div>
+                    <div id="profile-addresses" class="profile-tab-content">
+                        <h3 data-translate="addresses">Mis Direcciones</h3>
+                        <p data-translate="noAddresses">No hay direcciones guardadas.</p>
+                    </div>
+                    <div id="profile-settings" class="profile-tab-content">
+                        <h3 data-translate="settings">Configuración</h3>
+                        <p>Aquí puedes configurar tus preferencias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Carrito de Compras -->
+        <section id="carrito">
+            <h2 data-translate="cartTitle">Carrito de Compras</h2>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Los productos del carrito se cargarán con JavaScript -->
+                    <p data-translate="emptyCart">Tu carrito está vacío</p>
+                </div>
+                <div class="cart-total">
+                    <span data-translate="cartTotal">Total</span>: $<span id="cart-total-amount">0.00</span>
+                </div>
+                <div style="text-align: right; margin-top: 1rem;">
+                    <button class="btn" id="checkout-btn" data-translate="checkout">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Visualización de Producto (mantenida por compatibilidad) -->
+        <section id="producto">
+            <div id="product-details">
+                <!-- Los detalles del producto se cargarán con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para detalles del producto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-product-details">
+                <!-- Los detalles del producto se cargarán aquí con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Moon & Sun</h3>
+                    <p>Accesorios Moon & Sun</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="quickLinks">Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#" data-section="inicio" data-translate="inicio">Inicio</a></li>
+                        <li><a href="#" data-section="catalogo" data-translate="catalogo">Catálogo</a></li>
+                        <li><a href="#" data-section="perfil" data-translate="perfil">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="contact">Contacto</h3>
+                    <ul>
+                        <li>Email: info@moonsun.com</li>
+                        <li>Teléfono: +1 234 567 890</li>
+                        <li>Dirección: Calle Principal 123, Ciudad</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="rights">&copy; 2023 Moon & Sun. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
