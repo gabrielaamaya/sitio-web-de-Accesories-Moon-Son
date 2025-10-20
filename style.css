@@ -85,12 +85,13 @@ header {
     transition: background-color 0.3s;
 }
 
-/* Contenedor de navegación principal */
+/** Contenedor de navegación principal - MODIFICADO */
 nav {
     display: flex;
-    justify-content: space-between;  /* Logo a la izquierda, menú a la derecha */
+    justify-content: flex-start;  /* Cambiado para alinear a la izquierda */
     align-items: center;
-    position: relative;              /* Para posicionar elementos hijos absolutos */
+    position: relative;
+    gap: 20px;  /* Espacio entre elementos */
 }
 
 
@@ -139,9 +140,9 @@ nav {
 /* MENÚ HAMBURGUESA VISIBLE EN COMPUTADORA */
 /* ============================================= */
 
-/* Botón de hamburguesa - VISIBLE EN TODOS LOS DISPOSITIVOS */
+/* Botón de hamburguesa - MODIFICADO */
 .menu-toggle {
-    display: flex !important; /* VISIBLE SIEMPRE */
+    display: flex !important;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -157,8 +158,35 @@ nav {
     border-radius: var(--border-radius);
     padding: 8px 12px;
     transition: all 0.3s ease;
+    order: 1;  /* Cambiado a 1 para que esté primero */
+    margin-left: 0;  /* Eliminado margen izquierdo */
+}
+
+/* Logo container - MODIFICADO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 2;  /* Cambiado a 2 para que esté después del menú */
+}
+
+/* Lista del menú - MODIFICADO */
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+    order: 3;  /* Mantenido en 3 */
     margin-left: 20px;
-    order: 2;
+}
+
+/* Acciones de usuario - MODIFICADO */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    order: 4;
+    margin-left: auto;  /* Mantenido para empujar a la derecha */
 }
 
 /* Efecto hover del botón hamburguesa */
@@ -282,7 +310,7 @@ nav {
 
 /* Indicador visual del botón hamburguesa */
 .menu-toggle::after {
-    content: 'Menú';
+    content: '';
     font-size: 0.7rem;
     margin-left: 8px;
     font-family: var(--font-secondary);
@@ -290,7 +318,7 @@ nav {
 }
 
 .menu-toggle.active::after {
-    content: 'Cerrar';
+    content: '';
 }
 
 
