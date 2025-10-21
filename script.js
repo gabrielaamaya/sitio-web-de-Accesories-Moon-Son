@@ -75,9 +75,9 @@ const translations = {
         // Footer
         quickLinks: "Enlaces Rápidos",
         contact: "Contacto",
-        contactEmail: "Email: info@moonsun.com",
-        contactPhone: "Teléfono: +1 234 567 890",
-        contactAddress: "Dirección: Calle Principal 123, Ciudad",
+        contactEmail: "Email: ",
+        contactPhone: "Teléfono: ",
+        contactAddress: "Dirección: ",
         rights: "Todos los derechos reservados.",
         
         // Notificaciones
@@ -175,9 +175,9 @@ const translations = {
         // Footer
         quickLinks: "Quick Links",
         contact: "Contact",
-        contactEmail: "Email: info@moonsun.com",
-        contactPhone: "Phone: +1 234 567 890",
-        contactAddress: "Address: Main Street 123, City",
+        contactEmail: "Email:",
+        contactPhone: "Phone: ",
+        contactAddress: "Address:",
         rights: "All rights reserved.",
         
         // Notifications
@@ -570,7 +570,7 @@ function applyTranslations() {
     });
     
     document.querySelectorAll('[data-translate="rights"]').forEach(el => {
-        el.innerHTML = `&copy; 2023 Moon & Sun. ${t.rights}`;
+        el.innerHTML = `&copy; 2025 Moon & Sun. ${t.rights}`;
     });
     
     // Actualizar botones de productos
