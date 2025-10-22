@@ -7,7 +7,7 @@ const translations = {
         perfil: "Perfil",
         carrito: "Carrito",
         login: "Iniciar Sesión",
-        register: "Crear Cuenta",
+        register: "Registrarse",
         logout: "Cerrar Sesión",
         
         // Títulos
@@ -51,7 +51,7 @@ const translations = {
         
         // Formularios
         loginTitle: "Iniciar Sesión",
-        registerTitle: "Crear Cuenta",
+        registerTitle: "Registrar",
         email: "Correo Electrónico",
         password: "Contraseña",
         confirmPassword: "Confirmar Contraseña",
@@ -75,7 +75,7 @@ const translations = {
         // Footer
         quickLinks: "Enlaces Rápidos",
         contact: "Contacto",
-        contactEmail: "Email: ",
+        contactEmail: "Email:",
         contactPhone: "Teléfono: ",
         contactAddress: "Dirección: ",
         rights: "Todos los derechos reservados.",
@@ -107,7 +107,7 @@ const translations = {
         perfil: "Profile",
         carrito: "Cart",
         login: "Login",
-        register: "Create Account",
+        register: "Register",
         logout: "Logout",
         
         // Titles
@@ -151,7 +151,7 @@ const translations = {
         
         // Forms
         loginTitle: "Login",
-        registerTitle: "Create Account",
+        registerTitle: "Register",
         email: "Email",
         password: "Password",
         confirmPassword: "Confirm Password",
@@ -175,9 +175,9 @@ const translations = {
         // Footer
         quickLinks: "Quick Links",
         contact: "Contact",
-        contactEmail: "Email:",
-        contactPhone: "Phone: ",
-        contactAddress: "Address:",
+        contactEmail: "Email: info@moonsun.com",
+        contactPhone: "Phone: +1 234 567 890",
+        contactAddress: "Address: Main Street 123, City",
         rights: "All rights reserved.",
         
         // Notifications
@@ -208,17 +208,17 @@ const products = [
         id: 1, 
         name: "Bolso de mano para Caballero", 
         name_en: "Men's Handbag",
-        price: 34.99, 
+        price: 35.00, 
         category: "Accesorios", 
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "Bolso de mano para Caballero.jpg",
         description: "Estilo elegante de cuero con diseño compacto y enrollo. Perfecto para uso diario y ocasiones especiales.",
         description_en: "Elegant leather style with compact roll-up design. Perfect for daily use and special occasions."
     },
     { 
         id: 2, 
-        name: "Bolso de mano Elegante", 
+        name: "Bolso de mano Elegante Para Mujer", 
         name_en: "Elegant Handbag",
-        price: 26.99, 
+        price: 45.00, 
         category: "Accesorios", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
         description: "Estilo elegante de cuero con diseño compacto y enrollo. Ideal para damas que buscan sofisticación.",
@@ -228,7 +228,7 @@ const products = [
         id: 3, 
         name: "Mochila Estilo Juvenil", 
         name_en: "Youth Style Backpack",
-        price: 26.99, 
+        price: 30.00, 
         category: "Mochilas", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
         description: "Mochila juvenil moderna y compacta con múltiples compartimentos. Resistente y funcional.",
@@ -238,9 +238,9 @@ const products = [
         id: 4, 
         name: "Bolso estilo Cosmético", 
         name_en: "Cosmetic Style Bag",
-        price: 10.50, 
+        price: 12.00, 
         category: "Accesorios", 
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "Bolso estilo Cosmético.jpg",
         description: "Estuche compacto con múltiples compartimentos, ideal para cosméticos y artículos de belleza.",
         description_en: "Compact case with multiple compartments, ideal for cosmetics and beauty items."
     },
@@ -248,9 +248,9 @@ const products = [
         id: 5, 
         name: "Mochila Spider-Man", 
         name_en: "Spider-Man Backpack",
-        price: 25.60, 
+        price: 25.00, 
         category: "Mochilas", 
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "images.jpeg",
         description: "Mochila escolar, cómoda, resistente y con múltiples espacios. Diseño Spider-Man para fans.",
         description_en: "School backpack, comfortable, durable and with multiple spaces. Spider-Man design for fans."
     },
@@ -258,9 +258,9 @@ const products = [
         id: 6, 
         name: "Mochila Deportiva", 
         name_en: "Sports Backpack",
-        price: 29.99, 
+        price: 30.00, 
         category: "Mochilas", 
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "Mochila Deportiva.jpg",
         description: "Mochila ideal para deportes con compartimentos especializados para equipo y ropa.",
         description_en: "Ideal backpack for sports with specialized compartments for equipment and clothing."
     },
@@ -268,39 +268,61 @@ const products = [
         id: 7, 
         name: "Lonchera Térmica", 
         name_en: "Thermal Lunch Box",
-        price: 15.99, 
+        price: 15.00, 
         category: "Escolar", 
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "lonchera termica.jpg",
         description: "Lonchera térmica para mantener la temperatura de tus alimentos durante horas.",
         description_en: "Thermal lunch box to maintain your food temperature for hours."
     },
     { 
         id: 8, 
-        name: "Estuche Escolar", 
+        name: "Catera de Mano Para Dama", 
         name_en: "School Pencil Case",
-        price: 8.99, 
+        price: 8.00, 
         category: "Escolar", 
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "Catera de Mano Para Mujer.jpg",
         description: "Estuche espacioso para guardar todos tus útiles escolares de manera organizada.",
         description_en: "Spacious case to store all your school supplies in an organized way."
     },
     { 
         id: 9, 
-        name: "Cartera de Viaje", 
+        name: "Bolso de Viaje", 
         name_en: "Travel Wallet",
-        price: 32.99, 
+        price: 35.00, 
         category: "Viaje", 
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Cartera segura con múltiples compartimentos para documentos y dinero durante tus viajes.",
+        image: "Bolso de Viaje.jpg",
+        description: "Bolso seguro con múltiples compartimentos para documentos y dinero durante tus viajes.",
         description_en: "Secure wallet with multiple compartments for documents and money during your travels."
     },
     { 
         id: 10, 
         name: "Mochila de Viaje", 
         name_en: "Travel Backpack",
-        price: 45.99, 
+        price: 45.00, 
         category: "Viaje", 
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+        image: "Mochila de Viaje.jpg",
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
+        description_en: "Spacious backpack perfect for short trips with organized compartments."
+    }
+    ,
+    { 
+        id: 11, 
+        name: "Lente de Sol", 
+        name_en: "Travel Backpack",
+        price: 45.00, 
+        category: "Viaje", 
+        image: "lentedesol.jpg",
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
+        description_en: "Spacious backpack perfect for short trips with organized compartments."
+    }
+    ,
+    { 
+        id: 12, 
+        name: "Reloj", 
+        name_en: "Travel Backpack",
+        price: 45.00, 
+        category: "Viaje", 
+        image: "relojdemano.jpg",
         description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
         description_en: "Spacious backpack perfect for short trips with organized compartments."
     }
@@ -1146,8 +1168,10 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.classList.toggle("active");
             menuToggle.classList.toggle("active");
         });
+  
     }
 });
+
 
 // ===== INICIALIZAR LA APLICACIÓN =====
 document.addEventListener('DOMContentLoaded', init);

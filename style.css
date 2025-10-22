@@ -57,15 +57,15 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
     
     /* Fondo de imagen para toda la página */
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+    background: #F3F4F6;
     background-size: cover;          /* Cubre toda el área disponible */
 }
 
 /* Contenedor principal para centrar contenido */
 .container {
-    max-width: 1200px;               /* Ancho máximo del contenido */
-    margin: 0 auto;                  /* Centrado horizontal */
-    padding: 0 20px;                 /* Padding lateral */
+    max-width: 1200 auto;               /* Ancho máximo del contenido */
+    margin: 0 30 auto;                  /* Centrado horizontal */
+    padding: 0 30px;                 /* Padding lateral */
 }
 
 
@@ -91,7 +91,7 @@ nav {
     justify-content: flex-start;  /* Cambiado para alinear a la izquierda */
     align-items: center;
     position: relative;
-    gap: 20px;  /* Espacio entre elementos */
+    gap: 5px;  /* Espacio entre elementos */
 }
 
 
@@ -149,7 +149,7 @@ nav {
     top: auto;
     right: auto;
     transform: none;
-    font-size: 24px;
+    font-size: 25px;
     color: #fff;
     cursor: pointer;
     z-index: 1001;
@@ -215,7 +215,7 @@ nav {
     left: 0;
     width: 300px;
     height: 100%;
-    background-color: #004d61;
+    background-color: #1E3A8A;
     padding: 80px 0 0 0;
     margin: 0;
     z-index: 1000;
@@ -235,7 +235,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: #FBBF24;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: 500;
@@ -258,8 +258,8 @@ nav {
 }
 
 .nav-links.active a:hover {
-    background-color: #006b85;
-    color: white;
+    background-color: #F3F4F6; 
+    color: #FBBF24;
     padding-left: 35px;
     border-left-color: var(--secondary-color);
 }
@@ -278,7 +278,7 @@ nav {
 }
 
 .nav-links.active a[data-section="catalogo"]::before {
-    content: "\f07a";
+    content: "\f03a";
 }
 
 .nav-links.active a[data-section="perfil"]::before {
@@ -287,7 +287,7 @@ nav {
 
 /* Ajuste del icono de cerrar cuando el menú está activo */
 .menu-toggle.active i::before {
-    content: "\f00d";
+    content: "\f00d"; /* Ícono de cerrar (X) */
     color: var(--secondary-color);
 }
 
@@ -327,68 +327,104 @@ nav {
 /* ============================================= */
 
 /* Contenedor de acciones del usuario */
+/* ============================= */
+/* BOTONES DE USUARIO CON ÍCONOS */
+/* ============================= */
 .user-actions {
     display: flex;
     align-items: center;
-    gap: 15px;                       /* Espacio entre elementos */
-    flex-wrap: wrap;                 /* Permite que se envuelvan en móviles */
-    order: 4;
-    margin-left: auto;
+    gap: 10px;
 }
 
-/* Botones de acciones del usuario */
+/* Botones generales */
 .user-actions button {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
+    display: inline-flex;              /* Ícono + texto alineados */
+    align-items: center;
+    gap: 6px;                          /* Espacio entre ícono y texto */
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
-    padding: 8px 15px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 8px;
     font-weight: 500;
-    transition: background-color 0.3s;
-    font-family: var(--font-secondary);
-    font-weight: 400;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Efecto hover en botones de usuario */
+/* Hover elegante */
 .user-actions button:hover {
-    opacity: 0.9;                    /* Ligera transparencia al pasar el mouse */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
 }
 
-/* Icono del carrito con contador */
+/* Íconos dentro de los botones */
+.user-actions button i {
+    font-size: 16px;
+    color: inherit; /* Usa el mismo color que el texto */
+}
+
+/* ============================= */
+/* BOTÓN DEL CARRITO */
+/* ============================= */
 .cart-icon {
-    position: relative;              /* Para posicionar el contador absoluto */
+    position: relative;
 }
 
-/* Contador de items en el carrito */
+/* Contador del carrito */
 .cart-count {
     position: absolute;
-    top: -8px;
+    top: -6px;
     right: -8px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    border-radius: 50%;              /* Forma circular */
+    border-radius: 50%;
     width: 18px;
     height: 18px;
-    font-size: 0.7rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    font-family: var(--font-secondary);
-    font-weight: 700;
+    font-size: -20px;
+    font-weight: bold;
 }
 
-
-/* ============================================= */
+/* ============================= */
 /* SELECTOR DE IDIOMA */
-/* ============================================= */
-
-/* Contenedor del selector de idioma */
-.language-selector {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+/* ============================= */
+.language-selector select {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+/* Hover del selector */
+.language-selector select:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+/* Imagen del inicio de sesión */
+.login-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-image img {
+  width: 180px; /* Puedes ajustar el tamaño */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /* Estilos del elemento select */
 .language-selector select {
@@ -556,14 +592,13 @@ section {
 /* Sección hero con imagen de fondo */
 .hero {
     background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), 
-                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') 
-                no-repeat center center/cover;
-    height: 300px;
+                image-set("logo.jpeg") no-repeat center center/cover;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #F3F4F6;
     margin-bottom: 2rem;
     border-radius: var(--border-radius);
 }
@@ -611,19 +646,19 @@ section {
 .promo-card h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* Subtítulos de tarjetas promocionales */
 .promo-card h3 {
-    color: var(--secondary-color);
+    color: #1E3A8A;
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
 
 /* Tarjeta promocional especial (diferente estilo) */
 .promo-card.special {
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     color: var(--primary-color);
     border-left: 4px solid var(--primary-color);
 }
@@ -637,9 +672,9 @@ section {
 /* Títulos de sección */
 .section-title {
     text-align: center;
-    margin: 2rem 0 1rem;
-    color: var(--primary-color);
-    font-size: 1.8rem;
+    margin: 2rem 0 1.1rem;
+    color: #ffffff;
+    font-size: 1.1rem;
     border-bottom: 2px solid var(--secondary-color); /* Línea decorativa inferior */
     padding-bottom: 0.5rem;
 }
@@ -1746,4 +1781,5 @@ footer {
     .modal-product-features ul {
         grid-template-columns: 1fr;
     }
+    
 }
