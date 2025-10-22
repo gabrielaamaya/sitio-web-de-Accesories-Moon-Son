@@ -175,9 +175,9 @@ const translations = {
         // Footer
         quickLinks: "Quick Links",
         contact: "Contact",
-        contactEmail: "Email: info@moonsun.com",
-        contactPhone: "Phone: +1 234 567 890",
-        contactAddress: "Address: Main Street 123, City",
+        contactEmail: "Email: ",
+        contactPhone: "Phone: ",
+        contactAddress: "Address: ",
         rights: "All rights reserved.",
         
         // Notifications
@@ -385,8 +385,18 @@ document.querySelectorAll('[data-translate="catalogo"]').forEach(el => {
     el.textContent = t.catalogo;
 });
 
+
+// Perfil con ícono
 document.querySelectorAll('[data-translate="perfil"]').forEach(el => {
+    // Asignar el texto traducido
     el.textContent = t.perfil;
+
+    // Crear el ícono
+    const icon = document.createElement("i");
+    icon.classList.add("fas", "fa-user"); // Ícono de usuario (Font Awesome)
+
+    // Agregar un pequeño espacio y colocar el ícono antes del texto
+    el.prepend(icon, " ");
 });
 
 // Botones

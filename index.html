@@ -28,7 +28,7 @@
             <ul class="nav-links" id="menu">
                 <li><a href="#" class="nav-link" data-section="inicio" data-translate="inicio">Inicio</a></li>
                <li><a href="#" class="nav-link" data-section="catalogo" data-translate="catalogo">Catálogo</a></li>
-                <li><a href="#" class="nav-link" data-section="perfil" data-translate="perfil">Perfil</a></li>
+                
             </ul>
             
             <div class="user-actions">
@@ -42,6 +42,11 @@
                 <button class="cart-icon" id="cart-btn" data-translate="carrito">
                     <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
                 </button>
+            <li>
+    <button class="nav-link perfil-btn" data-section="perfil" data-translate="perfil">
+        Perfil
+    </button>
+</li>
 
                 <!-- SELECTOR DE IDIOMA -->
                 <div class="language-selector">
@@ -100,7 +105,7 @@
             </div>
         </section>
 
-      <!-- Sección Iniciar Sesión -->
+      <!-- Sección  Sesión -->
 <section id="iniciar-sesion">
     <h2 data-translate="loginTitle">Iniciar Sesión</h2>
 
@@ -228,15 +233,15 @@
                         <form>
                             <div class="form-group">
                                 <label for="profile-name" data-translate="fullName">Nombre</label>
-                                <input type="text" id="profile-name" value="Juan Pérez">
+                                <input type="text" id="profile-name" value="">
                             </div>
                             <div class="form-group">
                                 <label for="profile-email" data-translate="email">Correo Electrónico</label>
-                                <input type="email" id="profile-email" value="juan@example.com">
+                                <input type="email" id="profile-email" value="">
                             </div>
                             <div class="form-group">
                                 <label for="profile-phone" data-translate="phone">Teléfono</label>
-                                <input type="tel" id="profile-phone" value="+1 234 567 890">
+                                <input type="tel" id="profile-phone" value="">
                             </div>
                             <button type="submit" class="btn" data-translate="saveChanges">Guardar Cambios</button>
                         </form>
