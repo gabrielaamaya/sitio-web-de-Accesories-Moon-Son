@@ -376,25 +376,46 @@ function changeLanguage(lang) {
 function applyTranslations() {
     const t = translations[currentLanguage];
     
-    // Navegación
-    document.querySelectorAll('[data-translate="inicio"]').forEach(el => {
-        el.textContent = t.inicio;
-    });
-    
-    document.querySelectorAll('[data-translate="catalogo"]').forEach(el => {
-        el.textContent = t.catalogo;
-    });
-    
-    document.querySelectorAll('[data-translate="perfil"]').forEach(el => {
-        el.textContent = t.perfil;
-    });
-    
-    // Botones
-    if (loginBtn.textContent !== t.logout) {
-        loginBtn.textContent = t.login;
-    }
-    registerBtn.textContent = t.register;
-    cartBtn.innerHTML = `${t.carrito} <span class="cart-count">0</span>`;
+   // Navegación
+document.querySelectorAll('[data-translate="inicio"]').forEach(el => {
+    el.textContent = t.inicio;
+});
+
+document.querySelectorAll('[data-translate="catalogo"]').forEach(el => {
+    el.textContent = t.catalogo;
+});
+
+document.querySelectorAll('[data-translate="perfil"]').forEach(el => {
+    el.textContent = t.perfil;
+});
+
+// Botones
+if (loginBtn.textContent !== t.logout) {
+    // Ícono de iniciar sesión (login)
+    loginBtn.innerHTML = `
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>${t.login}</span>
+    `;
+} else {
+    // Ícono de cerrar sesión (logout)
+    loginBtn.innerHTML = `
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>${t.logout}</span>
+    `;
+}
+
+// Ícono de registrar cuenta
+registerBtn.innerHTML = `
+    <i class="fa-solid fa-user-plus"></i>
+    <span>${t.register}</span>
+`;
+
+// Ícono + texto + contador de carrito
+cartBtn.innerHTML = `
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span>${t.carrito}</span>
+    <span class="cart-count">0</span>
+`;
     
     // Títulos de secciones
     document.querySelectorAll('[data-translate="featured"]').forEach(el => {
