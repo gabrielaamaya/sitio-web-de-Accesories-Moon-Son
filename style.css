@@ -620,10 +620,10 @@ section {
 
 
 /* ============================================= */
-/* SECCIONES PROMOCIONALES - INCLUYE RECOMENDADOS */
+/* SECCIONES PROMOCIONALES */
 /* ============================================= */
 
-/* Grid de tarjetas promocionales - ESTO INCLUYE LOS RECOMENDADOS */
+/* Grid de tarjetas promocionales */
 .promotional-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsive */
@@ -631,7 +631,7 @@ section {
     margin: 2rem 0;
 }
 
-/* Tarjetas promocionales individuales - ESTO SON LOS PRODUCTOS RECOMENDADOS */
+/* Tarjetas promocionales individuales */
 .promo-card {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
@@ -642,28 +642,28 @@ section {
     transition: background-color 0.3s;
 }
 
-/* Títulos de tarjetas promocionales - TÍTULOS DE RECOMENDADOS */
+/* Títulos de tarjetas promocionales */
 .promo-card h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
 
-/* Subtítulos de tarjetas promocionales - SUBTÍTULOS DE RECOMENDADOS */
+/* Subtítulos de tarjetas promocionales */
 .promo-card h3 {
     color: #1E3A8A;
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
 
-/* Tarjeta promocional especial (diferente estilo) - RECOMENDADO DESTACADO */
+/* Tarjeta promocional especial (diferente estilo) */
 .promo-card.special {
     background-color: #ffffff;
     color: var(--primary-color);
     border-left: 4px solid var(--primary-color);
 }
 
-/* Títulos en tarjeta especial - TÍTULOS DE RECOMENDADO DESTACADO */
+/* Títulos en tarjeta especial */
 .promo-card.special h2,
 .promo-card.special h3 {
     color: var(--primary-color);
@@ -708,10 +708,10 @@ section {
 
 
 /* ============================================= */
-/* PRODUCTOS Y CATÁLOGO - TAMBIÉN INCLUYE RECOMENDADOS */
+/* PRODUCTOS Y CATÁLOGO */
 /* ============================================= */
 
-/* Grid de productos destacados y catálogo - ESTO PUEDE SER RECOMENDADOS */
+/* Grid de productos destacados y catálogo */
 .featured-products, .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsive */
@@ -719,7 +719,7 @@ section {
     margin-top: 2rem;
 }
 
-/* Tarjetas de producto individuales - PRODUCTOS RECOMENDADOS */
+/* Tarjetas de producto individuales */
 .product-card {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
@@ -729,13 +729,13 @@ section {
     border: 1px solid var(--border-color);
 }
 
-/* Efecto hover en tarjetas de producto - HOVER EN RECOMENDADOS */
+/* Efecto hover en tarjetas de producto */
 .product-card:hover {
     transform: translateY(-5px);     /* Efecto de elevación */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra más pronunciada */
 }
 
-/* Contenedor de imagen del producto - IMAGEN DE RECOMENDADOS */
+/* Contenedor de imagen del producto */
 .product-image {
     height: 200px;
     background-color: #ddd;          /* Color de fondo temporal */
@@ -743,12 +743,12 @@ section {
     background-position: center;     /* Centra la imagen */
 }
 
-/* Información del producto - INFO DE RECOMENDADOS */
+/* Información del producto */
 .product-info {
     padding: 1rem;
 }
 
-/* Título del producto - NOMBRE DEL PRODUCTO RECOMENDADO */
+/* Título del producto */
 .product-info h3 {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
@@ -756,7 +756,7 @@ section {
     color: var(--text-color);
 }
 
-/* Precio del producto - PRECIO DE RECOMENDADOS */
+/* Precio del producto */
 .product-price {
     font-weight: bold;
     color: var(--secondary-color);   /* Color ámbar para precios */
@@ -1162,6 +1162,7 @@ section {
 .profile-tab-content.active {
     display: block;                  /* Solo la pestaña activa visible */
 }
+
 
 
 /* ============================================= */
