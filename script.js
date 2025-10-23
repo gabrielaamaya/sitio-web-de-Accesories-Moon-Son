@@ -1,330 +1,100 @@
-// ===== SISTEMA DE TRADUCCIÓN =====
-const translations = {
-    es: {
-        // Navegación
-        inicio: "Inicio",
-        catalogo: "Catálogo",
-        perfil: "Perfil",
-        carrito: "Carrito",
-        login: "Iniciar Sesión",
-        register: "Registrarse",
-        logout: "Cerrar Sesión",
-        
-        // Títulos
-        title: "Moon & Sun - Accesorios",
-        featured: "RECOMENDADOS PARA TI",
-        catalogTitle: "Catálogo de Productos",
-        profileTitle: "Perfil de Usuario",
-        cartTitle: "Carrito de Compras",
-        
-        // Promociones
-        backToSchool: "¡REGRESO A CLASES!",
-        schoolOffers: "SUPER OFERTAS EN ACCESORIOS ESCOLARES",
-        schoolDiscount: "Hasta 50% de Descuento en Mochilas, Loncheras y Estuches",
-        travelOffers: "GRANDES OFERTAS EN ACCESORIOS DE VIAJE",
-        travelDiscount: "Hasta 50% de Descuento en Mochilas, Carteras y Bolsos",
-        superOffer: "¡SUPER OFERTA!",
-        laverosOffer: "¡LAVEROS 2X1!",
-        
-        // Filtros
-        filters: "Filtros",
-        categories: "Categorías",
-        price: "Precio",
-        all: "Todos",
-        lessThan20: "Menos de $20",
-        between20and30: "$20 - $30",
-        moreThan30: "Más de $30",
-        applyFilters: "Aplicar Filtros",
-        
-        // Categorías específicas
-        categoriesAccesorios: "Accesorios",
-        categoriesMochilas: "Mochilas",
-        categoriesEscolar: "Escolar",
-        categoriesViaje: "Viaje",
-        
-        // Productos
-        addToCart: "Agregar al Carrito",
-        viewDetails: "Ver Detalles",
-        emptyCart: "Tu carrito está vacío",
-        cartTotal: "Total",
-        checkout: "Proceder al Pago",
-        
-        // Formularios
-        loginTitle: "Iniciar Sesión",
-        registerTitle: "Registrar",
-        email: "Correo Electrónico",
-        password: "Contraseña",
-        confirmPassword: "Confirmar Contraseña",
-        fullName: "Nombre Completo",
-        haveAccount: "¿Ya tienes cuenta?",
-        noAccount: "¿No tienes cuenta?",
-        loginHere: "Inicia sesión aquí",
-        registerHere: "Regístrate aquí",
-        
-        // Perfil
-        personalInfo: "Información Personal",
-        myOrders: "Mis Pedidos",
-        addresses: "Direcciones",
-        settings: "Configuración",
-        phone: "Teléfono",
-        saveChanges: "Guardar Cambios",
-        noOrders: "No tienes pedidos recientes.",
-        noAddresses: "No hay direcciones guardadas.",
-        settingsDescription: "Aquí puedes configurar tus preferencias.",
-        
-        // Footer
-        quickLinks: "Enlaces Rápidos",
-        contact: "Contacto",
-        contactEmail: "Email:",
-        contactPhone: "Teléfono: ",
-        contactAddress: "Dirección: ",
-        rights: "Todos los derechos reservados.",
-        
-        // Notificaciones
-        addedToCart: "agregado al carrito",
-        removedFromCart: "eliminado del carrito",
-        loginSuccess: "Inicio de sesión exitoso",
-        logoutSuccess: "Sesión cerrada",
-        registerSuccess: "Cuenta creada exitosamente",
-        purchaseSuccess: "¡Compra realizada con éxito! Recibirás un correo con los detalles de tu pedido.",
-        emptyCartError: "Tu carrito está vacío",
-        loginRequired: "Por favor, inicia sesión para continuar con la compra",
-        passwordMismatch: "Las contraseñas no coinciden",
-        completeFields: "Por favor, completa todos los campos",
-        filtersApplied: "Filtros aplicados: productos encontrados",
-        
-        // Modal de producto
-        productFeatures: "Características del Producto",
-        close: "Cerrar",
-        highQuality: "Material de alta calidad y durabilidad",
-        exclusiveDesign: "Diseño exclusivo Moon & Sun",
-        satisfactionGuarantee: "Garantía de satisfacción"
-    },
-    en: {
-        // Navigation
-        inicio: "Home",
-        catalogo: "Catalog",
-        perfil: "Profile",
-        carrito: "Cart",
-        login: "Login",
-        register: "Register",
-        logout: "Logout",
-        
-        // Titles
-        title: "Moon & Sun - Accessories",
-        featured: "RECOMMENDED FOR YOU",
-        catalogTitle: "Product Catalog",
-        profileTitle: "User Profile",
-        cartTitle: "Shopping Cart",
-        
-        // Promotions
-        backToSchool: "BACK TO SCHOOL!",
-        schoolOffers: "SUPER OFFERS ON SCHOOL ACCESSORIES",
-        schoolDiscount: "Up to 50% Off on Backpacks, Lunch Boxes and Pencil Cases",
-        travelOffers: "GREAT OFFERS ON TRAVEL ACCESSORIES",
-        travelDiscount: "Up to 50% Off on Backpacks, Wallets and Bags",
-        superOffer: "SUPER OFFER!",
-        laverosOffer: "KEYCHAINS 2X1!",
-        
-        // Filters
-        filters: "Filters",
-        categories: "Categories",
-        price: "Price",
-        all: "All",
-        lessThan20: "Less than $20",
-        between20and30: "$20 - $30",
-        moreThan30: "More than $30",
-        applyFilters: "Apply Filters",
-        
-        // Specific categories
-        categoriesAccesorios: "Accessories",
-        categoriesMochilas: "Backpacks",
-        categoriesEscolar: "School",
-        categoriesViaje: "Travel",
-        
-        // Products
-        addToCart: "Add to Cart",
-        viewDetails: "View Details",
-        emptyCart: "Your cart is empty",
-        cartTotal: "Total",
-        checkout: "Proceed to Checkout",
-        
-        // Forms
-        loginTitle: "Login",
-        registerTitle: "Register",
-        email: "Email",
-        password: "Password",
-        confirmPassword: "Confirm Password",
-        fullName: "Full Name",
-        haveAccount: "Already have an account?",
-        noAccount: "Don't have an account?",
-        loginHere: "Login here",
-        registerHere: "Register here",
-        
-        // Profile
-        personalInfo: "Personal Information",
-        myOrders: "My Orders",
-        addresses: "Addresses",
-        settings: "Settings",
-        phone: "Phone",
-        saveChanges: "Save Changes",
-        noOrders: "You have no recent orders.",
-        noAddresses: "No saved addresses.",
-        settingsDescription: "Here you can configure your preferences.",
-        
-        // Footer
-        quickLinks: "Quick Links",
-        contact: "Contact",
-        contactEmail: "Email: ",
-        contactPhone: "Phone: ",
-        contactAddress: "Address: ",
-        rights: "All rights reserved.",
-        
-        // Notifications
-        addedToCart: "added to cart",
-        removedFromCart: "removed from cart",
-        loginSuccess: "Login successful",
-        logoutSuccess: "Session closed",
-        registerSuccess: "Account created successfully",
-        purchaseSuccess: "Purchase completed successfully! You will receive an email with your order details.",
-        emptyCartError: "Your cart is empty",
-        loginRequired: "Please log in to continue with your purchase",
-        passwordMismatch: "Passwords do not match",
-        completeFields: "Please complete all fields",
-        filtersApplied: "Filters applied: products found",
-        
-        // Product Modal
-        productFeatures: "Product Features",
-        close: "Close",
-        highQuality: "High quality and durable material",
-        exclusiveDesign: "Exclusive Moon & Sun design",
-        satisfactionGuarantee: "Satisfaction guarantee"
-    }
-};
-
-// Datos de productos actualizados para Moon & Sun - Traducidos
+// Datos de productos para Moon & Sun
 const products = [
     { 
         id: 1, 
         name: "Bolso de mano para Caballero", 
-        name_en: "Men's Handbag",
         price: 35.00, 
         category: "Accesorios", 
         image: "Bolso de mano para Caballero.jpg",
-        description: "Estilo elegante de cuero con diseño compacto y enrollo. Perfecto para uso diario y ocasiones especiales.",
-        description_en: "Elegant leather style with compact roll-up design. Perfect for daily use and special occasions."
+        description: "Estilo elegante de cuero con diseño compacto y enrollo. Perfecto para uso diario y ocasiones especiales."
     },
     { 
         id: 2, 
         name: "Bolso de mano Elegante Para Mujer", 
-        name_en: "Elegant Handbag",
         price: 45.00, 
         category: "Accesorios", 
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Estilo elegante de cuero con diseño compacto y enrollo. Ideal para damas que buscan sofisticación.",
-        description_en: "Elegant leather style with compact roll-up design. Ideal for ladies seeking sophistication."
+        description: "Estilo elegante de cuero con diseño compacto y enrollo. Ideal para damas que buscan sofisticación."
     },
     { 
         id: 3, 
         name: "Mochila Estilo Juvenil", 
-        name_en: "Youth Style Backpack",
         price: 30.00, 
         category: "Mochilas", 
         image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
-        description: "Mochila juvenil moderna y compacta con múltiples compartimentos. Resistente y funcional.",
-        description_en: "Modern and compact youth backpack with multiple compartments. Durable and functional."
+        description: "Mochila juvenil moderna y compacta con múltiples compartimentos. Resistente y funcional."
     },
     { 
         id: 4, 
         name: "Bolso estilo Cosmético", 
-        name_en: "Cosmetic Style Bag",
         price: 12.00, 
         category: "Accesorios", 
         image: "Bolso estilo Cosmético.jpg",
-        description: "Estuche compacto con múltiples compartimentos, ideal para cosméticos y artículos de belleza.",
-        description_en: "Compact case with multiple compartments, ideal for cosmetics and beauty items."
+        description: "Estuche compacto con múltiples compartimentos, ideal para cosméticos y artículos de belleza."
     },
     { 
         id: 5, 
         name: "Mochila Spider-Man", 
-        name_en: "Spider-Man Backpack",
         price: 25.00, 
         category: "Mochilas", 
         image: "images.jpeg",
-        description: "Mochila escolar, cómoda, resistente y con múltiples espacios. Diseño Spider-Man para fans.",
-        description_en: "School backpack, comfortable, durable and with multiple spaces. Spider-Man design for fans."
+        description: "Mochila escolar, cómoda, resistente y con múltiples espacios. Diseño Spider-Man para fans."
     },
     { 
         id: 6, 
         name: "Mochila Deportiva", 
-        name_en: "Sports Backpack",
         price: 30.00, 
         category: "Mochilas", 
         image: "Mochila Deportiva.jpg",
-        description: "Mochila ideal para deportes con compartimentos especializados para equipo y ropa.",
-        description_en: "Ideal backpack for sports with specialized compartments for equipment and clothing."
+        description: "Mochila ideal para deportes con compartimentos especializados para equipo y ropa."
     },
     { 
         id: 7, 
         name: "Lonchera Térmica", 
-        name_en: "Thermal Lunch Box",
         price: 15.00, 
         category: "Escolar", 
         image: "lonchera termica.jpg",
-        description: "Lonchera térmica para mantener la temperatura de tus alimentos durante horas.",
-        description_en: "Thermal lunch box to maintain your food temperature for hours."
+        description: "Lonchera térmica para mantener la temperatura de tus alimentos durante horas."
     },
     { 
         id: 8, 
         name: "Catera de Mano Para Dama", 
-        name_en: "School Pencil Case",
         price: 8.00, 
         category: "Escolar", 
         image: "Catera de Mano Para Mujer.jpg",
-        description: "Estuche espacioso para guardar todos tus útiles escolares de manera organizada.",
-        description_en: "Spacious case to store all your school supplies in an organized way."
+        description: "Estuche espacioso para guardar todos tus útiles escolares de manera organizada."
     },
     { 
         id: 9, 
         name: "Bolso de Viaje", 
-        name_en: "Travel Wallet",
         price: 35.00, 
         category: "Viaje", 
         image: "Bolso de Viaje.jpg",
-        description: "Bolso seguro con múltiples compartimentos para documentos y dinero durante tus viajes.",
-        description_en: "Secure wallet with multiple compartments for documents and money during your travels."
+        description: "Bolso seguro con múltiples compartimentos para documentos y dinero durante tus viajes."
     },
     { 
         id: 10, 
         name: "Mochila de Viaje", 
-        name_en: "Travel Backpack",
         price: 45.00, 
         category: "Viaje", 
         image: "Mochila de Viaje.jpg",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
-        description_en: "Spacious backpack perfect for short trips with organized compartments."
-    }
-    ,
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
+    },
     { 
         id: 11, 
         name: "Lente de Sol", 
-        name_en: "Travel Backpack",
         price: 45.00, 
         category: "Viaje", 
         image: "lentedesol.jpg",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
-        description_en: "Spacious backpack perfect for short trips with organized compartments."
-    }
-    ,
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
+    },
     { 
         id: 12, 
         name: "Reloj", 
-        name_en: "Travel Backpack",
         price: 45.00, 
         category: "Viaje", 
         image: "relojdemano.jpg",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados.",
-        description_en: "Spacious backpack perfect for short trips with organized compartments."
+        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
     }
 ];
 
@@ -332,7 +102,6 @@ const products = [
 let currentUser = null;
 let cart = [];
 let currentProduct = null;
-let currentLanguage = 'es';
 
 // Elementos DOM
 const sections = document.querySelectorAll('section');
@@ -354,306 +123,6 @@ const profileTabs = document.querySelectorAll('.profile-tab');
 const profileTabContents = document.querySelectorAll('.profile-tab-content');
 const applyFiltersBtn = document.getElementById('apply-filters');
 const checkoutBtn = document.getElementById('checkout-btn');
-const languageSelect = document.getElementById('language-select');
-
-// ===== SISTEMA DE TRADUCCIÓN =====
-function changeLanguage(lang) {
-    currentLanguage = lang;
-    applyTranslations();
-    
-    // Guardar preferencia de idioma
-    localStorage.setItem('language', lang);
-    
-    // Actualizar el título de la página
-    document.title = translations[lang].title;
-    
-    // Recargar productos para mostrar nombres y descripciones en el idioma correcto
-    loadFeaturedProducts();
-    loadProducts();
-    updateCartUI();
-}
-
-function applyTranslations() {
-    const t = translations[currentLanguage];
-    
-   // Navegación
-document.querySelectorAll('[data-translate="inicio"]').forEach(el => {
-    el.textContent = t.inicio;
-});
-
-document.querySelectorAll('[data-translate="catalogo"]').forEach(el => {
-    el.textContent = t.catalogo;
-});
-
-
-// Perfil con ícono
-document.querySelectorAll('[data-translate="perfil"]').forEach(el => {
-    // Asignar el texto traducido
-    el.textContent = t.perfil;
-
-    // Crear el ícono
-    const icon = document.createElement("i");
-    icon.classList.add("fas", "fa-user"); // Ícono de usuario (Font Awesome)
-
-    // Agregar un pequeño espacio y colocar el ícono antes del texto
-    el.prepend(icon, " ");
-});
-
-// Botones
-if (loginBtn.textContent !== t.logout) {
-    // Ícono de iniciar sesión (login)
-    loginBtn.innerHTML = `
-        <i class="fa-solid fa-right-to-bracket"></i>
-        <span>${t.login}</span>
-    `;
-} else {
-    // Ícono de cerrar sesión (logout)
-    loginBtn.innerHTML = `
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>${t.logout}</span>
-    `;
-}
-
-// Ícono de registrar cuenta
-registerBtn.innerHTML = `
-    <i class="fa-solid fa-user-plus"></i>
-    <span>${t.register}</span>
-`;
-
-// Ícono + texto + contador de carrito
-cartBtn.innerHTML = `
-    <i class="fa-solid fa-cart-shopping"></i>
-    <span>${t.carrito}</span>
-    <span class="cart-count">0</span>
-`;
-    
-    // Títulos de secciones
-    document.querySelectorAll('[data-translate="featured"]').forEach(el => {
-        el.textContent = t.featured;
-    });
-    
-    document.querySelectorAll('[data-translate="catalogTitle"]').forEach(el => {
-        el.textContent = t.catalogTitle;
-    });
-    
-    document.querySelectorAll('[data-translate="profileTitle"]').forEach(el => {
-        el.textContent = t.profileTitle;
-    });
-    
-    document.querySelectorAll('[data-translate="cartTitle"]').forEach(el => {
-        el.textContent = t.cartTitle;
-    });
-    
-    // Promociones
-    document.querySelectorAll('[data-translate="backToSchool"]').forEach(el => {
-        el.textContent = t.backToSchool;
-    });
-    
-    document.querySelectorAll('[data-translate="schoolOffers"]').forEach(el => {
-        el.textContent = t.schoolOffers;
-    });
-    
-    document.querySelectorAll('[data-translate="schoolDiscount"]').forEach(el => {
-        el.textContent = t.schoolDiscount;
-    });
-    
-    document.querySelectorAll('[data-translate="travelOffers"]').forEach(el => {
-        el.textContent = t.travelOffers;
-    });
-    
-    document.querySelectorAll('[data-translate="travelDiscount"]').forEach(el => {
-        el.textContent = t.travelDiscount;
-    });
-    
-    document.querySelectorAll('[data-translate="superOffer"]').forEach(el => {
-        el.textContent = t.superOffer;
-    });
-    
-    document.querySelectorAll('[data-translate="laverosOffer"]').forEach(el => {
-        el.textContent = t.laverosOffer;
-    });
-    
-    // Filtros
-    document.querySelectorAll('[data-translate="filters"]').forEach(el => {
-        el.textContent = t.filters;
-    });
-    
-    document.querySelectorAll('[data-translate="categories"]').forEach(el => {
-        el.textContent = t.categories;
-    });
-    
-    document.querySelectorAll('[data-translate="price"]').forEach(el => {
-        el.textContent = t.price;
-    });
-    
-    document.querySelectorAll('[data-translate="all"]').forEach(el => {
-        el.textContent = t.all;
-    });
-    
-    document.querySelectorAll('[data-translate="lessThan20"]').forEach(el => {
-        el.textContent = t.lessThan20;
-    });
-    
-    document.querySelectorAll('[data-translate="between20and30"]').forEach(el => {
-        el.textContent = t.between20and30;
-    });
-    
-    document.querySelectorAll('[data-translate="moreThan30"]').forEach(el => {
-        el.textContent = t.moreThan30;
-    });
-    
-    document.querySelectorAll('[data-translate="applyFilters"]').forEach(el => {
-        el.textContent = t.applyFilters;
-    });
-    
-    // Actualizar etiquetas de categorías en los filtros
-    document.querySelectorAll('[data-translate="categoriesAccesorios"]').forEach(el => {
-        el.textContent = t.categoriesAccesorios;
-    });
-    
-    document.querySelectorAll('[data-translate="categoriesMochilas"]').forEach(el => {
-        el.textContent = t.categoriesMochilas;
-    });
-    
-    document.querySelectorAll('[data-translate="categoriesEscolar"]').forEach(el => {
-        el.textContent = t.categoriesEscolar;
-    });
-    
-    document.querySelectorAll('[data-translate="categoriesViaje"]').forEach(el => {
-        el.textContent = t.categoriesViaje;
-    });
-    
-    // Formularios
-    document.querySelectorAll('[data-translate="loginTitle"]').forEach(el => {
-        el.textContent = t.loginTitle;
-    });
-    
-    document.querySelectorAll('[data-translate="registerTitle"]').forEach(el => {
-        el.textContent = t.registerTitle;
-    });
-    
-    document.querySelectorAll('[data-translate="email"]').forEach(el => {
-        el.textContent = t.email;
-    });
-    
-    document.querySelectorAll('[data-translate="password"]').forEach(el => {
-        el.textContent = t.password;
-    });
-    
-    document.querySelectorAll('[data-translate="confirmPassword"]').forEach(el => {
-        el.textContent = t.confirmPassword;
-    });
-    
-    document.querySelectorAll('[data-translate="fullName"]').forEach(el => {
-        el.textContent = t.fullName;
-    });
-    
-    document.querySelectorAll('[data-translate="haveAccount"]').forEach(el => {
-        el.textContent = t.haveAccount;
-    });
-    
-    document.querySelectorAll('[data-translate="noAccount"]').forEach(el => {
-        el.textContent = t.noAccount;
-    });
-    
-    document.querySelectorAll('[data-translate="loginHere"]').forEach(el => {
-        el.textContent = t.loginHere;
-    });
-    
-    document.querySelectorAll('[data-translate="registerHere"]').forEach(el => {
-        el.textContent = t.registerHere;
-    });
-    
-    // Perfil
-    document.querySelectorAll('[data-translate="personalInfo"]').forEach(el => {
-        el.textContent = t.personalInfo;
-    });
-    
-    document.querySelectorAll('[data-translate="myOrders"]').forEach(el => {
-        el.textContent = t.myOrders;
-    });
-    
-    document.querySelectorAll('[data-translate="addresses"]').forEach(el => {
-        el.textContent = t.addresses;
-    });
-    
-    document.querySelectorAll('[data-translate="settings"]').forEach(el => {
-        el.textContent = t.settings;
-    });
-    
-    document.querySelectorAll('[data-translate="phone"]').forEach(el => {
-        el.textContent = t.phone;
-    });
-    
-    document.querySelectorAll('[data-translate="saveChanges"]').forEach(el => {
-        el.textContent = t.saveChanges;
-    });
-    
-    document.querySelectorAll('[data-translate="noOrders"]').forEach(el => {
-        el.textContent = t.noOrders;
-    });
-    
-    document.querySelectorAll('[data-translate="noAddresses"]').forEach(el => {
-        el.textContent = t.noAddresses;
-    });
-    
-    document.querySelectorAll('[data-translate="settingsDescription"]').forEach(el => {
-        el.textContent = t.settingsDescription;
-    });
-    
-    // Footer
-    document.querySelectorAll('[data-translate="quickLinks"]').forEach(el => {
-        el.textContent = t.quickLinks;
-    });
-    
-    document.querySelectorAll('[data-translate="contact"]').forEach(el => {
-        el.textContent = t.contact;
-    });
-    
-    document.querySelectorAll('[data-translate="contactEmail"]').forEach(el => {
-        el.textContent = t.contactEmail;
-    });
-    
-    document.querySelectorAll('[data-translate="contactPhone"]').forEach(el => {
-        el.textContent = t.contactPhone;
-    });
-    
-    document.querySelectorAll('[data-translate="contactAddress"]').forEach(el => {
-        el.textContent = t.contactAddress;
-    });
-    
-    document.querySelectorAll('[data-translate="rights"]').forEach(el => {
-        el.innerHTML = `&copy; 2025 Moon & Sun. ${t.rights}`;
-    });
-    
-    // Actualizar botones de productos
-    document.querySelectorAll('.add-to-cart').forEach(btn => {
-        btn.textContent = t.addToCart;
-    });
-    
-    document.querySelectorAll('.view-product').forEach(btn => {
-        btn.textContent = t.viewDetails;
-    });
-    
-    // Actualizar checkout
-    checkoutBtn.textContent = t.checkout;
-    
-    // Actualizar carrito si está vacío
-    if (cartItemsContainer.querySelector('p')) {
-        cartItemsContainer.querySelector('p').textContent = t.emptyCart;
-    }
-    
-    // Actualizar total del carrito
-    document.querySelector('.cart-total').innerHTML = `${t.cartTotal}: $<span id="cart-total-amount">0.00</span>`;
-}
-
-function initLanguage() {
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage) {
-        changeLanguage(savedLanguage);
-        languageSelect.value = savedLanguage;
-    }
-}
 
 // ===== FUNCIONES DE NAVEGACIÓN =====
 function showSection(sectionId) {
@@ -668,9 +137,6 @@ function showSection(sectionId) {
 
 // ===== INICIALIZACIÓN =====
 function init() {
-    // Inicializar idioma
-    initLanguage();
-    
     // Cargar productos destacados
     loadFeaturedProducts();
     
@@ -739,11 +205,6 @@ function setupEventListeners() {
     // Checkout
     checkoutBtn.addEventListener('click', handleCheckout);
     
-    // Selector de idioma
-    languageSelect.addEventListener('change', (e) => {
-        changeLanguage(e.target.value);
-    });
-    
     // Enlaces del footer
     document.querySelectorAll('footer a[data-section]').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -780,10 +241,10 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="product-image" style="background-image: url('${product.image}')"></div>
         <div class="product-info">
-            <h3>${currentLanguage === 'es' ? product.name : product.name_en}</h3>
+            <h3>${product.name}</h3>
             <div class="product-price">$${product.price.toFixed(2)}</div>
-            <button class="add-to-cart" data-id="${product.id}">${translations[currentLanguage].addToCart}</button>
-            <button class="btn view-product" style="margin-top: 0.5rem; width: 100%; background-color: var(--primary-color); color: white;" data-id="${product.id}">${translations[currentLanguage].viewDetails}</button>
+            <button class="add-to-cart" data-id="${product.id}">Agregar al Carrito</button>
+            <button class="btn view-product" style="margin-top: 0.5rem; width: 100%; background-color: var(--primary-color); color: white;" data-id="${product.id}">Ver Detalles</button>
         </div>
     `;
     
@@ -810,27 +271,27 @@ function showProductDetails(productId) {
     modalContent.innerHTML = `
         <div class="modal-product-container">
             <div class="modal-product-image">
-                <img src="${product.image}" alt="${currentLanguage === 'es' ? product.name : product.name_en}">
+                <img src="${product.image}" alt="${product.name}">
             </div>
             <div class="modal-product-info">
-                <h2>${currentLanguage === 'es' ? product.name : product.name_en}</h2>
+                <h2>${product.name}</h2>
                 <div class="modal-product-price">$${product.price.toFixed(2)}</div>
                 <div class="modal-product-description">
-                    <p>${currentLanguage === 'es' ? product.description : product.description_en}</p>
+                    <p>${product.description}</p>
                 </div>
                 <div class="modal-product-actions">
-                    <button class="btn" id="modal-add-to-cart">${translations[currentLanguage].addToCart}</button>
-                    <button class="btn" style="background-color: var(--primary-color); color: white;" id="modal-close-btn">${translations[currentLanguage].close}</button>
+                    <button class="btn" id="modal-add-to-cart">Agregar al Carrito</button>
+                    <button class="btn" style="background-color: var(--primary-color); color: white;" id="modal-close-btn">Cerrar</button>
                 </div>
             </div>
         </div>
         <div class="modal-product-features">
-            <h3>${translations[currentLanguage].productFeatures}</h3>
+            <h3>Características del Producto</h3>
             <ul>
-                <li>${currentLanguage === 'es' ? product.description : product.description_en}</li>
-                <li>${translations[currentLanguage].highQuality}</li>
-                <li>${translations[currentLanguage].exclusiveDesign}</li>
-                <li>${translations[currentLanguage].satisfactionGuarantee}</li>
+                <li>${product.description}</li>
+                <li>Material de alta calidad y durabilidad</li>
+                <li>Diseño exclusivo Moon & Sun</li>
+                <li>Garantía de satisfacción</li>
             </ul>
         </div>
     `;
@@ -891,7 +352,7 @@ function addToCart(productId) {
     updateCartUI();
     
     // Mostrar notificación
-    showNotification(`${currentLanguage === 'es' ? product.name : product.name_en} ${translations[currentLanguage].addedToCart}`);
+    showNotification(`${product.name} agregado al carrito`);
     
     // Mostrar sección del carrito
     showSection('carrito');
@@ -906,7 +367,7 @@ function updateCartUI() {
     cartItemsContainer.innerHTML = '';
     
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = `<p>${translations[currentLanguage].emptyCart}</p>`;
+        cartItemsContainer.innerHTML = `<p>Tu carrito está vacío</p>`;
         cartTotalAmount.textContent = '0.00';
         return;
     }
@@ -922,7 +383,7 @@ function updateCartUI() {
         cartItem.innerHTML = `
             <div class="cart-item-image" style="background-image: url('${item.product.image}')"></div>
             <div class="cart-item-details">
-                <div class="cart-item-title">${currentLanguage === 'es' ? item.product.name : item.product.name_en}</div>
+                <div class="cart-item-title">${item.product.name}</div>
                 <div class="cart-item-price">$${item.product.price.toFixed(2)}</div>
             </div>
             <div class="cart-item-quantity">
@@ -931,7 +392,7 @@ function updateCartUI() {
                 <button class="quantity-btn increase" data-id="${item.product.id}">+</button>
             </div>
             <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
-            <button class="remove-item" data-id="${item.product.id}">${translations[currentLanguage].viewDetails === "Ver Detalles" ? "Eliminar" : "Remove"}</button>
+            <button class="remove-item" data-id="${item.product.id}">Eliminar</button>
         `;
         
         cartItemsContainer.appendChild(cartItem);
@@ -988,7 +449,7 @@ function removeFromCart(productId) {
     if (item) {
         cart = cart.filter(item => item.product.id !== parseInt(productId));
         updateCartUI();
-        showNotification(`${currentLanguage === 'es' ? item.product.name : item.product.name_en} ${translations[currentLanguage].removedFromCart}`);
+        showNotification(`${item.product.name} eliminado del carrito`);
     }
 }
 
@@ -1028,7 +489,7 @@ function applyFilters() {
     });
     
     // Mostrar notificación
-    showNotification(`${translations[currentLanguage].filtersApplied.replace('productos encontrados', `${filteredProducts.length} productos encontrados`)}`);
+    showNotification(`Filtros aplicados: ${filteredProducts.length} productos encontrados`);
 }
 
 function handleLogin(e) {
@@ -1043,11 +504,14 @@ function handleLogin(e) {
             email: email
         };
         
-        showNotification(translations[currentLanguage].loginSuccess);
+        showNotification("Inicio de sesión exitoso");
         showSection('inicio');
         
         // Actualizar interfaz para usuario logueado
-        loginBtn.textContent = translations[currentLanguage].logout;
+        loginBtn.innerHTML = `
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Cerrar Sesión</span>
+        `;
         registerBtn.style.display = 'none';
         
         // Cambiar comportamiento del botón de login para cerrar sesión
@@ -1057,17 +521,20 @@ function handleLogin(e) {
         // Limpiar formulario
         loginForm.reset();
     } else {
-        showNotification(translations[currentLanguage].completeFields, 'error');
+        showNotification("Por favor, completa todos los campos", 'error');
     }
 }
 
 function handleLogout() {
     currentUser = null;
-    showNotification(translations[currentLanguage].logoutSuccess);
+    showNotification("Sesión cerrada");
     showSection('inicio');
     
     // Restaurar botones originales
-    loginBtn.textContent = translations[currentLanguage].login;
+    loginBtn.innerHTML = `
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Iniciar Sesión</span>
+    `;
     registerBtn.style.display = 'inline-block';
     
     // Restaurar eventos originales
@@ -1083,7 +550,7 @@ function handleRegister(e) {
     const confirmPassword = document.getElementById('register-confirm').value;
     
     if (password !== confirmPassword) {
-        showNotification(translations[currentLanguage].passwordMismatch, 'error');
+        showNotification("Las contraseñas no coinciden", 'error');
         return;
     }
     
@@ -1094,11 +561,14 @@ function handleRegister(e) {
             email: email
         };
         
-        showNotification(translations[currentLanguage].registerSuccess);
+        showNotification("Cuenta creada exitosamente");
         showSection('inicio');
         
         // Actualizar interfaz para usuario logueado
-        loginBtn.textContent = translations[currentLanguage].logout;
+        loginBtn.innerHTML = `
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Cerrar Sesión</span>
+        `;
         registerBtn.style.display = 'none';
         
         // Cambiar comportamiento del botón de login para cerrar sesión
@@ -1108,18 +578,18 @@ function handleRegister(e) {
         // Limpiar formulario
         registerForm.reset();
     } else {
-        showNotification(translations[currentLanguage].completeFields, 'error');
+        showNotification("Por favor, completa todos los campos", 'error');
     }
 }
 
 function handleCheckout() {
     if (cart.length === 0) {
-        showNotification(translations[currentLanguage].emptyCartError, 'error');
+        showNotification("Tu carrito está vacío", 'error');
         return;
     }
     
     if (!currentUser) {
-        showNotification(translations[currentLanguage].loginRequired, 'error');
+        showNotification("Por favor, inicia sesión para continuar con la compra", 'error');
         showSection('iniciar-sesion');
         return;
     }
@@ -1128,7 +598,7 @@ function handleCheckout() {
     const total = cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
     
     if (confirm(`¿Deseas proceder con el pago de $${total.toFixed(2)}?`)) {
-        showNotification(translations[currentLanguage].purchaseSuccess);
+        showNotification("¡Compra realizada con éxito! Recibirás un correo con los detalles de tu pedido.");
         
         // Limpiar carrito después de la compra
         cart = [];
@@ -1199,10 +669,8 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.classList.toggle("active");
             menuToggle.classList.toggle("active");
         });
-  
     }
 });
-
 
 // ===== INICIALIZAR LA APLICACIÓN =====
 document.addEventListener('DOMContentLoaded', init);
