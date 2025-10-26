@@ -1,0 +1,34 @@
+/* ============================================= */
+/* NOTIFICACIONES DEL SISTEMA */
+/* ============================================= */
+
+/* Notificaciones emergentes */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Notificación de éxito */
+.notification.success {
+    background-color: #4CAF50;
+}
+
+/* Notificación de error */
+.notification.error {
+    background-color: #f44336;
+}
+
+/* Notificación informativa */
+.notification.info {
+    background-color: var(--primary-color);
+}

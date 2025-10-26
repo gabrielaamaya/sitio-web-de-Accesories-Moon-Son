@@ -1,0 +1,28 @@
+/* ============================================= */
+/* GRID SYSTEM */
+/* ============================================= */
+
+/* Grid de tarjetas promocionales */
+.promotional-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Grid de productos destacados y catálogo */
+.featured-products, .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Grid de productos con flex column para mejor alineación */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+    flex: 1;
+}

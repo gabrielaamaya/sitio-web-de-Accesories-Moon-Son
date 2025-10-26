@@ -1,0 +1,197 @@
+/* ============================================= */
+/* HEADER Y NAVEGACIÓN PRINCIPAL */
+/* ============================================= */
+
+/* Header fijo en la parte superior */
+header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
+}
+
+/** Contenedor de navegación principal */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* ============================================= */
+/* LOGO Y MARCA */
+/* ============================================= */
+
+/* Contenedor del logo e imagen */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Contenedor de la imagen del logo */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+}
+
+/* Imagen del logo */
+.logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto del logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
+/* ============================================= */
+/* MENÚ DE NAVEGACIÓN */
+/* ============================================= */
+
+/* Lista del menú */
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+/* Elementos del menú */
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #FBBF24;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* ============================================= */
+/* ACCIONES DE USUARIO Y SELECTOR DE IDIOMA */
+/* ============================================= */
+
+/* Contenedor de acciones del usuario */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botones generales */
+.user-actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover elegante */
+.user-actions button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Íconos dentro de los botones */
+.user-actions button i {
+    font-size: 16px;
+    color: inherit;
+}
+
+/* ============================= */
+/* BOTÓN DEL CARRITO */
+/* ============================= */
+.cart-icon {
+    position: relative;
+}
+
+/* Contador del carrito */
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* SELECTOR DE IDIOMA */
+/* ============================= */
+.language-selector select {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover del selector */
+.language-selector select:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Estilos del elemento select */
+.language-selector select {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    height: 36px;
+}
+
+/* Opciones del selector de idioma */
+.language-selector select option {
+    background-color: white;
+    color: var(--primary-color);
+}

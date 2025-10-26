@@ -1,0 +1,66 @@
+/* ============================================= */
+/* PÁGINA DEL CARRITO DE COMPRAS */
+/* ============================================= */
+
+/* Contenedor principal del carrito */
+.cart-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+/* Items individuales del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Imagen del producto en el carrito */
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    margin-right: 1rem;
+    border-radius: var(--border-radius);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Detalles del item del carrito */
+.cart-item-details {
+    flex: 1;
+}
+
+/* Título del producto en carrito */
+.cart-item-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Precio en carrito */
+.cart-item-price {
+    color: var(--secondary-color);
+}
+
+/* Controles de cantidad */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+/* Total del carrito */
+.cart-total {
+    margin-top: 1.5rem;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-color);
+    color: var(--text-color);
+}

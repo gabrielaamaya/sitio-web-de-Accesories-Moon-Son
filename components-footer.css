@@ -1,0 +1,63 @@
+/* ============================================= */
+/* FOOTER */
+/* ============================================= */
+
+/* Footer principal */
+footer {
+    background-color: var(--header-bg);
+    color: var(--light-color);
+    padding: 2rem 0;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+/* Contenido del footer en grid */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Secciones individuales del footer */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+/* Títulos de secciones del footer */
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* Listas del footer */
+.footer-section ul {
+    list-style: none;
+}
+
+/* Items de listas del footer */
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Enlaces del footer */
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Efecto hover en enlaces del footer */
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 1rem;
+}

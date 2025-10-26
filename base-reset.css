@@ -1,0 +1,28 @@
+/* ============================================= */
+/* ESTILOS GENERALES Y RESET */
+/* ============================================= */
+
+/* Reset de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+/* Estilos generales del body */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background: #F3F4F6;
+    background-size: cover;
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

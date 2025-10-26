@@ -1,0 +1,100 @@
+/* ============================================= */
+/* TARJETAS */
+/* ============================================= */
+
+/* Tarjetas promocionales individuales */
+.promo-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+/* Títulos de tarjetas promocionales */
+.promo-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Subtítulos de tarjetas promocionales */
+.promo-card h3 {
+    color: #1E3A8A;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Tarjeta promocional especial (diferente estilo) */
+.promo-card.special {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Títulos en tarjeta especial */
+.promo-card.special h2,
+.promo-card.special h3 {
+    color: var(--primary-color);
+}
+
+/* Tarjetas de producto individuales */
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto hover en tarjetas de producto */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de imagen del producto */
+.product-image {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Información del producto */
+.product-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título del producto */
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    min-height: 3rem;
+    color: var(--text-color);
+}
+
+/* Precio del producto */
+.product-price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Precio original tachado (para ofertas) */
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}

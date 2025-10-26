@@ -670,6 +670,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuToggle.classList.toggle("active");
         });
     }
+    
 });
 
 // ===== INICIALIZAR LA APLICACIÓN =====

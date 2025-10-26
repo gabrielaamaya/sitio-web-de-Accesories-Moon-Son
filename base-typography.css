@@ -1,0 +1,54 @@
+/* ============================================= */
+/* TIPOGRAFÍA */
+/* ============================================= */
+
+/* ESTILOS BASE PARA EL CUERPO DEL DOCUMENTO */
+body {
+    font-family: "Comic Neue";          /* Comic Neue para texto normal */
+    font-size: 16px;                     /* Tamaño base de fuente */
+    line-height: 1.6;                    /* Altura de línea para mejor legibilidad */
+    color: var(--text-color);            /* Color del texto definido en variables */
+}
+
+/* ESTILOS PARA TODOS LOS ENCABEZADOS (H1 - H6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Serif", serif;  /* Roboto Serif para títulos */
+    font-weight: 700;                    /* Grosor de fuente: negrita */
+    margin-bottom: 0.5rem;               /* Margen inferior entre títulos */
+}
+
+/* JERARQUÍA DE TAMAÑOS PARA ENCABEZADOS */
+h1 { 
+    font-size: 2.5rem;                   /* Título principal - más grande */
+}
+
+h2 { 
+    font-size: 2rem;                     /* Título secundario */
+}
+
+h3 { 
+    font-size: 1.5rem;                   /* Título terciario */
+}
+
+h4 { 
+    font-size: 1.25rem;                  /* Título cuarto nivel */
+}
+
+h5 { 
+    font-size: 1.1rem;                   /* Título quinto nivel */
+}
+
+h6 { 
+    font-size: 1rem;                     /* Título sexto nivel */
+}
+
+/* ESTILOS PARA PÁRRAFOS DE TEXTO */
+p {
+    margin-bottom: 1rem;                 /* Espaciado inferior entre párrafos */
+    line-height: 1.7;                    /* Mayor altura de línea para mejor lectura */
+}
+
+/* También aplicar Comic Neue a otros elementos de texto */
+span, li, td, th, label, input, textarea, button {
+    font-family: "Comic Neue";           /* Comic Neue para texto general */
+}

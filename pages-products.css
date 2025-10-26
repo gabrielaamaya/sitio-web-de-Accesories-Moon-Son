@@ -1,0 +1,51 @@
+/* ============================================= */
+/* PÁGINA DE PRODUCTOS - CATÁLOGO Y FILTROS */
+/* ============================================= */
+
+/* Contenedor principal del catálogo */
+.catalog-container {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Panel de filtros */
+.filters {
+    flex: 0 0 250px;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    height: fit-content;
+    transition: background-color 0.3s;
+}
+
+/* Grupos de filtros */
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Títulos de grupos de filtros */
+.filter-group h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Opciones individuales de filtro */
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs de filtro */
+.filter-option input {
+    margin-right: 0.5rem;
+}
+
+/* Labels de filtro */
+.filter-option label {
+    color: var(--text-color);
+}

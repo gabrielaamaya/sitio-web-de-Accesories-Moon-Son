@@ -1,0 +1,29 @@
+/* ============================================= */
+/* VARIABLES CSS GLOBALES */
+/* ============================================= */
+
+:root {
+    /* Paleta de colores principal */
+    --primary-color: #1E3A8A;
+    --secondary-color: #FBBF24;
+    --accent-color: #FBBF24;
+    --light-color: #F3F4F6;
+    --dark-color: #1E3A8A;
+    --text-color: #1E3A8A;
+    
+    /* Variables de diseño */
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    /* Tipografía */
+    --font-primary: "Roboto Serif", serif;
+    --font-secondary: "Comic Neue";
+    
+    /* Variables para modo claro/oscuro */
+    --bg-color: #ffffff;
+    --header-bg: #1E3A8A;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --btn-bg: #1E3A8A;
+    --btn-text: #ffffff;
+}
