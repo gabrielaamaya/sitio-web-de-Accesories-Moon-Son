@@ -60,118 +60,6 @@
 
 
 
-<!-- ===== CSS ===== -->
-<style>
-header {
-    background: #1e3a8a;
-   
-    padding: 10px 0;
-}
-
-.container nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    
-    text-decoration: none;
-}
-
-.user-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Oculta los botones originales de login/register */
-#login-btn, #register-btn {
-    display: none;
-}
-
-/* Perfil desplegable */
-.perfil-container {
-    position: relative;
-}
-
-.perfil-btn {
-    background: transparent;
-    border: none;
-    color: #1E3A8A;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-
-
-
-
-/* --- MENÚ DESPLEGABLE --- */
-.perfil-menu {
-    position: absolute;
-    top: 45px;
-    right: 0;
-    background: #F3F4F6;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    display: none;
-    flex-direction: column;
-    min-width: 160px;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.5s ease;
-    transform: translateY(-10px);
-}
-
-/* Mostrar menú al pasar el mouse */
-.perfil-container:hover .perfil-menu {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.perfil-menu button {
-    background: none;
-    color: #1E3A8A;
-    border: none;
-    text-align: left;
-    padding: 10px 15px;
-    cursor: pointer;
-    width: 100%;
-    transition: background 0.5s;
-}
-
-.perfil-menu button:hover {
-    background: #1E3A8A;
-}
-</style>
-
-
-
-
-<!-- ===== JS ===== -->
-<script>
-// Los botones originales se mantienen funcionales
-document.getElementById('login-btn-dropdown').addEventListener('click', () => {
-    document.getElementById('login-btn').click();
-});
-
-document.getElementById('register-btn-dropdown').addEventListener('click', () => {
-    document.getElementById('register-btn').click();
-});
-</script>
-
-
-
-
-
 <!-- Agregar Font Awesome -->
 <link
   rel="stylesheet"
@@ -451,5 +339,7 @@ document.getElementById('register-btn-dropdown').addEventListener('click', () =>
     <script src="auth.js"></script>
     <script src="utils.js"></script>
     <script src="script.js"></script>
+    <script src="menu-despegable.js"></script>
+
 </body>
 </html>
