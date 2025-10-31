@@ -25,12 +25,29 @@
                 <li><a href="#" class="nav-link" data-section="catalogo">Catálogo</a></li>
             </ul>
 
-            <!-- 🔍 Barra de búsqueda agregada -->
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Buscar productos...">
-                <button id="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <!-- 🔍 Fin de barra de búsqueda -->
+     <!-- 🔍 Barra de búsqueda con sugerencias -->
+<div class="search-container">
+  <i class="fas fa-search"></i>
+  <input type="text" id="search-input" placeholder="¿Qué estás buscando?" autocomplete="off">
+  <div class="search-suggestions" id="suggestions">
+    <h4>Términos más buscados</h4>
+    <ol>
+      <li>billetera</li>
+      <li>lonchera</li>
+      <li>mochila</li>
+      <li>cangurera</li>
+      <li>bolso</li>
+      <li>estuche</li>
+      <li>multiusos</li>
+      <li>billeteras</li>d
+      <li>sombrilla</li>
+      <li>loncheras</li>
+    </ol>
+  </div>
+</div>
+<!-- 🔍 Fin de barra de búsqueda -->
+
+
 
             <div class="user-actions">
                 <!-- Botones originales (se ocultarán visualmente, pero siguen en el DOM) -->
