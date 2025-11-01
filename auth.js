@@ -85,15 +85,24 @@ function handleRegister(e) {
 }
 
 function updateUserInterface() {
+    // Cambia el botón a "Cerrar sesión"
     loginBtn.innerHTML = `
         <i class="fa-solid fa-right-from-bracket"></i>
         <span>Cerrar Sesión</span>
     `;
-    registerBtn.style.display = 'none';
-    
+
+    // Ocultar botón principal de registro
+    if (registerBtn) registerBtn.style.display = 'none';
+
+    // Ocultar el botón de registro del menú desplegable
+    const dropdownRegister = document.getElementById('dropdown-register');
+    if (dropdownRegister) dropdownRegister.style.display = 'none';
+
+    // Remover evento antiguo e iniciar sesión en el nuevo
     loginBtn.removeEventListener('click', () => showSection('iniciar-sesion'));
     loginBtn.addEventListener('click', handleLogout);
 
+    // Mostrar saludo
     let userGreeting = document.getElementById('user-greeting');
     if (!userGreeting) {
         userGreeting = document.createElement('div');
@@ -107,11 +116,18 @@ function updateUserInterface() {
 }
 
 function restoreOriginalButtons() {
+    // Restaurar botón "Iniciar sesión"
     loginBtn.innerHTML = `
         <i class="fa-solid fa-right-to-bracket"></i>
         <span>Iniciar Sesión</span>
     `;
-    registerBtn.style.display = 'inline-block';
+
+    // El botón principal de registro se mantiene oculto SIEMPRE
+    if (registerBtn) registerBtn.style.display = 'none';
+
+    // Mostrar botón de registro en el menú desplegable
+    const dropdownRegister = document.getElementById('dropdown-register');
+    if (dropdownRegister) dropdownRegister.style.display = 'inline-block';
     
     loginBtn.removeEventListener('click', handleLogout);
     loginBtn.addEventListener('click', () => showSection('iniciar-sesion'));
@@ -129,6 +145,9 @@ function setupAuthEvents() {
         currentUser = savedUser;
         updateUserInterface();
         fillUserProfile();
+    } else {
+        // Si no hay sesión activa, ocultar botón principal de registro desde el inicio
+        if (registerBtn) registerBtn.style.display = 'none';
     }
 }
 
