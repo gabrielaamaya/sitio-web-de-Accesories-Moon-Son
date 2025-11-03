@@ -201,3 +201,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar autenticación
     setupAuthEvents();
 });
+
