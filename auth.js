@@ -1,14 +1,14 @@
 // ===== FUNCIONES DE AUTENTICACIÓN =====
 function handleLogin(e) {
     e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
+    const email = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value.trim();
     
     // Obtener usuarios registrados del almacenamiento local
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     // Buscar usuario existente
-    const foundUser = users.find(u => u.email === email && u.password === password);
+    const foundUser = users.find(u => u.email.trim() === email && u.password.trim() === password);
 
     if (foundUser) {
         currentUser = {
@@ -47,10 +47,10 @@ function handleLogout() {
 
 function handleRegister(e) {
     e.preventDefault();
-    const name = document.getElementById('register-name').value;
-    const email = document.getElementById('register-email').value;
-    const password = document.getElementById('register-password').value;
-    const confirmPassword = document.getElementById('register-confirm').value;
+    const name = document.getElementById('register-name').value.trim();
+    const email = document.getElementById('register-email').value.trim();
+    const password = document.getElementById('register-password').value.trim();
+    const confirmPassword = document.getElementById('register-confirm').value.trim();
     
     if (password !== confirmPassword) {
         showNotification("Las contraseñas no coinciden", 'error');
@@ -59,7 +59,7 @@ function handleRegister(e) {
     
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    if (users.some(u => u.email === email)) {
+    if (users.some(u => u.email.trim() === email)) {
         showNotification("El correo ya está registrado", 'error');
         return;
     }
@@ -174,12 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
         profileForm.addEventListener('submit', e => {
             e.preventDefault();
 
-            const name = document.getElementById('profile-name').value;
-            const email = document.getElementById('profile-email').value;
-            const phone = document.getElementById('profile-phone').value;
+            const name = document.getElementById('profile-name').value.trim();
+            const email = document.getElementById('profile-email').value.trim();
+            const phone = document.getElementById('profile-phone').value.trim();
 
             // Actualizar usuario actual
             let current = JSON.parse(localStorage.getItem('currentUser')) || {};
+            const oldEmail = current.email; // Guardamos el correo anterior para buscar el usuario
             current.name = name;
             current.email = email;
             current.phone = phone;
@@ -187,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Actualizar lista de usuarios guardados
             let users = JSON.parse(localStorage.getItem('users')) || [];
-            const index = users.findIndex(u => u.email === current.email);
+            const index = users.findIndex(u => u.email.trim() === oldEmail.trim());
             if (index !== -1) users[index] = current;
             localStorage.setItem('users', JSON.stringify(users));
 
@@ -196,4 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateUserInterface();
         });
     }
+
+    // Inicializar autenticación
+    setupAuthEvents();
 });

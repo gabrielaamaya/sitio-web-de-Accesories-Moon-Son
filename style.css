@@ -18,11 +18,12 @@
 @import url('components-buttons.css');
 @import url('components-cards.css');
 @import url('components-modal.css');
-@import url('components-forms.css');
 @import url('components-footer.css');
 @import url('components-notifications.css');
 @import url('menu-despegable.css');
 @import url('Barra-busqueda.css');
+@import url('Iniciar-Sesión.css');
+@import url('Registrarse.css');
 
 /* Layouts */
 @import url('layouts-main-layout.css');

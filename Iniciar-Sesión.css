@@ -1,0 +1,61 @@
+/* ============================================= */
+/* FORMULARIO INICIAR SESIÓN */
+/* ============================================= */
+
+/* Contenedor del formulario de inicio de sesión */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
+}
+
+/* Imagen del inicio de sesión */
+.login-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-image img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grupos de campos de formulario */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Etiquetas de formulario */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Campos de entrada de formulario */
+.form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Estado focus en campos de formulario */
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(30,58,138,0.2);
+}
