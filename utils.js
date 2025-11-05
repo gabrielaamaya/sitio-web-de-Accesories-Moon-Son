@@ -25,7 +25,7 @@ function showNotification(message, type = 'success') {
     if (type === 'success') {
         notification.style.backgroundColor = '#4CAF50';
     } else if (type === 'error') {
-        notification.style.backgroundColor = '#f44336';
+        notification.style.backgroundColor = '#ff0000ff';
     } else {
         notification.style.backgroundColor = 'var(--primary-color)';
     }

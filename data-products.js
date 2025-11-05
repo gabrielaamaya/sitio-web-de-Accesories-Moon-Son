@@ -79,21 +79,6 @@ export const products = [
         category: "Viaje", 
         image: "Mochila de Viaje.jpg",
         description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
-    },
-    { 
-        id: 11, 
-        name: "Lente de Sol", 
-        price: 45.00, 
-        category: "Viaje", 
-        image: "lentedesol.jpg",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
-    },
-    { 
-        id: 12, 
-        name: "Reloj", 
-        price: 45.00, 
-        category: "Viaje", 
-        image: "relojdemano.jpg",
-        description: "Mochila espaciosa perfecta para viajes cortos con compartimentos organizados."
     }
+   
 ];
