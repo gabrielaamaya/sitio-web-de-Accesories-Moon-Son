@@ -20,12 +20,12 @@
 
 /* Notificación de éxito */
 .notification.success {
-    background-color: #4CAF50;
+    background-color: #1E3A8A;
 }
 
 /* Notificación de error */
 .notification.error {
-    background-color: #f44336;
+    background-color: #FBBF24;
 }
 
 /* Notificación informativa */

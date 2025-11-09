@@ -28,24 +28,44 @@ searchInput.addEventListener('blur', () => {
   }, 150);
 });
 
+// Función para redirigir según el término
+function buscarTermino(termino) {
+  const paginas = {
+    billetera: 'billetera.html',
+    lonchera: 'lonchera.html',
+    mochila: 'mochila.html',
+    cangurera: 'cangurera.html',
+    bolso: 'bolso.html',
+    estuche: 'estuche.html',
+    multiusos: 'multiusos.html',
+    lente: 'lente.html'
+  };
+
+  termino = termino.toLowerCase().trim();
+
+  if (paginas[termino]) {
+    window.location.href = paginas[termino]; // redirige a la página correspondiente
+  } else {
+    alert(`No se encontró página para: ${termino}`);
+  }
+}
+
 // Buscar al presionar Enter
 searchInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    alert(`Buscando: ${searchInput.value.trim()}`);
+    buscarTermino(searchInput.value);
   }
 });
 
 // Al hacer clic en una sugerencia
 document.querySelectorAll('.search-suggestions li').forEach(item => {
   item.addEventListener('click', () => {
-    searchInput.value = item.textContent;
+    const termino = item.textContent;
+    searchInput.value = termino;
     searchContainer.classList.remove('active');
-    alert(`Buscando: ${item.textContent}`);
+    buscarTermino(termino);
   });
 });
-
-
-
 
 
 
