@@ -4,27 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lentes - Moon & Sun</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages-products.css">
+  <link rel="stylesheet" href="menu-despegable.css">
+  <link rel="stylesheet" href="Barra-busqueda.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
 
-  <!-- ========================= -->
+<body>
+  <!-- ===================== -->
   <!-- HEADER Y NAVEGACIÓN -->
-  <!-- ========================= -->
+  <!-- ===================== -->
   <header>
     <div class="container">
       <nav>
+        <!-- Logo -->
         <div class="logo-container">
           <div class="logo">Moon & Sun</div>
         </div>
 
+        <!-- Enlaces de navegación -->
         <ul class="nav-links" id="menu">
           <li><a href="index.html" class="nav-link" data-section="inicio">Inicio</a></li>
-          <li><a href="catalogo.html" class="nav-link" data-section="catalogo">Catálogo</a></li>
+          <li><a href="catalogo-productos-encontrados.html" class="nav-link" data-section="catalogo">Catálogo</a></li>
         </ul>
 
-        <!-- 🔍 Barra de búsqueda -->
+        <!-- 🔍 Barra de búsqueda con sugerencias -->
         <div class="search-container">
           <i class="fas fa-search"></i>
           <input type="text" id="search-input" placeholder="¿Qué estás buscando?" autocomplete="off">
@@ -42,9 +49,9 @@
             </ol>
           </div>
         </div>
-        <!-- 🔍 Fin barra de búsqueda -->
+        <!-- 🔍 Fin de barra de búsqueda -->
 
-        <!-- ACCIONES DE USUARIO -->
+        <!-- Acciones de usuario -->
         <div class="user-actions">
           <button id="login-btn" class="dropdown-item">
             <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
@@ -52,12 +59,11 @@
           <button id="register-btn" class="dropdown-item">
             <i class="fas fa-user-plus"></i> Registrarse
           </button>
-
           <button class="cart-icon" id="cart-btn">
             <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
           </button>
 
-          <!-- PERFIL -->
+          <!-- Perfil con menú desplegable -->
           <div class="perfil-container">
             <button class="nav-link perfil-btn" data-section="perfil">
               <i class="fas fa-user"></i> Perfil
@@ -75,21 +81,23 @@
       </nav>
     </div>
   </header>
+  
 
-  <!-- ========================= -->
+  <!-- ===================== -->
   <!-- CONTENIDO PRINCIPAL -->
-  <!-- ========================= -->
+  <!-- ===================== -->
   <main>
     <h1>Productos de Lentes</h1>
-    <div class="products-grid"></div>
+    <div class="products-grid" id="product-list"></div>
   </main>
 
-  <!-- ========================= -->
+  <!-- ===================== -->
   <!-- SCRIPTS -->
-  <!-- ========================= -->
+  <!-- ===================== -->
+  <script type="module" src="data-products.js"></script>
   <script type="module" src="productos-categoria.js"></script>
+  <script src="menu-despegable.js"></script>
   <script src="navigation.js"></script>
   <script src="Barra-busqueda.js"></script>
-
 </body>
 </html>

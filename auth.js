@@ -85,22 +85,8 @@ function handleRegister(e) {
 }
 
 function updateUserInterface() {
-    // Cambia el botón a "Cerrar sesión"
-    loginBtn.innerHTML = `
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>Cerrar Sesión</span>
-    `;
-
-    // Ocultar botón principal de registro
-    if (registerBtn) registerBtn.style.display = 'none';
-
-    // Ocultar el botón de registro del menú desplegable
-    const dropdownRegister = document.getElementById('dropdown-register');
-    if (dropdownRegister) dropdownRegister.style.display = 'none';
-
-    // Remover evento antiguo e iniciar sesión en el nuevo
-    loginBtn.removeEventListener('click', () => showSection('iniciar-sesion'));
-    loginBtn.addEventListener('click', handleLogout);
+    // ✅ Ya no se cambia el botón de inicio de sesión
+    // Solo mostramos saludo y el botón "Cerrar sesión"
 
     // Mostrar saludo
     let userGreeting = document.getElementById('user-greeting');
@@ -113,6 +99,17 @@ function updateUserInterface() {
         loginBtn.parentNode.insertBefore(userGreeting, loginBtn.nextSibling);
     }
     userGreeting.textContent = `Hola, ${currentUser.name}`;
+
+    // Ocultar botón de registro
+    if (registerBtn) registerBtn.style.display = 'none';
+
+    // Ocultar el botón de registro del menú desplegable
+    const dropdownRegister = document.getElementById('dropdown-register');
+    if (dropdownRegister) dropdownRegister.style.display = 'none';
+
+    // Mostrar el botón de cerrar sesión
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) logoutBtn.style.display = 'inline-block';
 }
 
 function restoreOriginalButtons() {
@@ -129,8 +126,9 @@ function restoreOriginalButtons() {
     const dropdownRegister = document.getElementById('dropdown-register');
     if (dropdownRegister) dropdownRegister.style.display = 'inline-block';
     
-    loginBtn.removeEventListener('click', handleLogout);
-    loginBtn.addEventListener('click', () => showSection('iniciar-sesion'));
+    // Ocultar el botón de cerrar sesión
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) logoutBtn.style.display = 'none';
 
     const userGreeting = document.getElementById('user-greeting');
     if (userGreeting) userGreeting.remove();
@@ -139,6 +137,10 @@ function restoreOriginalButtons() {
 function setupAuthEvents() {
     loginForm.addEventListener('submit', handleLogin);
     registerForm.addEventListener('submit', handleRegister);
+
+    // ✅ Vinculamos el botón de cerrar sesión real
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) logoutBtn.addEventListener('click', handleLogout);
 
     const savedUser = JSON.parse(localStorage.getItem('currentUser'));
     if (savedUser) {
@@ -201,4 +203,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar autenticación
     setupAuthEvents();
 });
-

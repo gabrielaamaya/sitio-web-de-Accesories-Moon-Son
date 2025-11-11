@@ -9,78 +9,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header y Navegación -->
+
+ <!-- Header y Navegación -->
 <header>
-    <div class="container">
-        <nav>
-            <div class="logo-container">
-                <div class="">
-                    <img src="" alt="">
-                </div>
-                <div class="logo">Moon & Sun</div>
-            </div>
-            
-            <ul class="nav-links" id="menu">
-                <li><a href="#" class="nav-link" data-section="inicio">Inicio</a></li>
-                <li><a href="#" class="nav-link" data-section="catalogo">Catálogo</a></li>
-            </ul>
+  <div class="container">
+    <nav>
+      <!-- 🟣 LOGO -->
+      <div class="logo-container">
+        <div class="logo">Moon & Sun</div>
+      </div>
 
-     <!-- 🔍 Barra de búsqueda con sugerencias -->
-<div class="search-container">
-  <i class="fas fa-search"></i>
-  <input type="text" id="search-input" placeholder="¿Qué estás buscando?" autocomplete="off">
-  <div class="search-suggestions" id="suggestions">
-    <h4>Términos más buscados</h4>
-    <ol>
-      <li>billetera</li>
-      <li>lonchera</li>
-      <li>mochila</li>
-      <li>cangurera</li>
-      <li>bolso</li>
-      <li>estuche</li>
-      <li>multiusos</li>
-      <li>lentes</li>
-    </ol>
+      <!-- 🟣 ENLACES DE NAVEGACIÓN -->
+      <ul class="nav-links" id="menu">
+        <li><a href="#" class="nav-link" data-section="inicio">Inicio</a></li>
+        <li><a href="#" class="nav-link" data-section="catalogo">Catálogo</a></li>
+      </ul>
+
+      <!-- 🟣 BARRA DE BÚSQUEDA CON SUGERENCIAS -->
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="¿Qué estás buscando?" 
+          autocomplete="off"
+        >
+        <div class="search-suggestions" id="suggestions">
+          <h4>Términos más buscados</h4>
+          <ol>
+            <li>billetera</li>
+            <li>lonchera</li>
+            <li>mochila</li>
+            <li>cangurera</li>
+            <li>bolso</li>
+            <li>estuche</li>
+            <li>multiusos</li>
+            <li>lentes</li>
+          </ol>
+        </div>
+      </div>
+      <!-- 🔍 Fin de barra de búsqueda -->
+
+      <!-- 🟣 ACCIONES DE USUARIO -->
+      <div class="user-actions">
+        <!-- Botones originales (se ocultarán visualmente, pero siguen en el DOM) -->
+        <button id="login-btn" class="dropdown-item">
+          <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+        </button>
+        <button id="register-btn" class="dropdown-item">
+          <i class="fas fa-user-plus"></i> Registrarse
+        </button>
+
+        <button class="cart-icon" id="cart-btn">
+          <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
+        </button>
+
+        <!-- Botón de perfil -->
+        <div class="perfil-container">
+          <button class="nav-link perfil-btn" data-section="perfil">
+            <i class="fas fa-user"></i> Perfil
+          </button>
+
+          <!-- Menú desplegable -->
+          <div class="perfil-menu" id="perfil-menu">
+            <button id="login-btn-dropdown">
+              <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+            </button>
+            <button id="register-btn-dropdown">
+              <i class="fas fa-user-plus"></i> Registrarse
+            </button>
+            <!-- Nuevo botón de Cerrar sesión -->
+            <button id="logout-btn" class="dropdown-item" style="display:none;">
+  <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+</button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
-</div>
-<!-- 🔍 Fin de barra de búsqueda -->
-
-
-
-            <div class="user-actions">
-                <!-- Botones originales (se ocultarán visualmente, pero siguen en el DOM) -->
-                <button id="login-btn" class="dropdown-item">
-                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-                </button>
-                <button id="register-btn" class="dropdown-item">
-                    <i class="fas fa-user-plus"></i> Registrarse
-                </button>
-                
-                <button class="cart-icon" id="cart-btn">
-                    <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
-                </button>
-                
-                <!-- Botón de perfil -->
-                <div class="perfil-container">
-                    <button class="nav-link perfil-btn" data-section="perfil">
-                        <i class="fas fa-user"></i> Perfil
-                    </button>
-                    <!-- Menú desplegable -->
-                    <div class="perfil-menu" id="perfil-menu">
-                        <button id="login-btn-dropdown">
-                            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-                        </button>
-                        <button id="register-btn-dropdown">
-                            <i class="fas fa-user-plus"></i> Registrarse
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
 </header>
-
-
 
 
 <!-- Agregar Font Awesome -->

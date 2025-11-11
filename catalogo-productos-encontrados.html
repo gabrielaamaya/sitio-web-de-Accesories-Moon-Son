@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Billeteras - Moon & Sun</title>
+  <title>Catálogo - Moon & Sun</title>
 
-  
   <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages-products.css">
@@ -21,18 +20,18 @@
   <header>
     <div class="container">
       <nav>
-        <!-- Logo -->
+        <!-- LOGO -->
         <div class="logo-container">
           <div class="logo">Moon & Sun</div>
         </div>
 
-        <!-- Enlaces de navegación -->
+        <!-- ENLACES DE NAVEGACIÓN -->
         <ul class="nav-links" id="menu">
-          <li><a href="index.html" class="nav-link" data-section="inicio">Inicio</a></li>
-          <li><a href="catalogo-productos-encontrados.html" class="nav-link" data-section="catalogo">Catálogo</a></li>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="catalogo-productos-encontrados.html" class="nav-link active">Catálogo</a></li>
         </ul>
 
-        <!-- 🔍 Barra de búsqueda con sugerencias -->
+        <!-- 🔍 BARRA DE BÚSQUEDA -->
         <div class="search-container">
           <i class="fas fa-search"></i>
           <input type="text" id="search-input" placeholder="¿Qué estás buscando?" autocomplete="off">
@@ -50,9 +49,8 @@
             </ol>
           </div>
         </div>
-        <!-- 🔍 Fin de barra de búsqueda -->
 
-        <!-- Acciones de usuario -->
+        <!-- ACCIONES DE USUARIO -->
         <div class="user-actions">
           <button id="login-btn" class="dropdown-item">
             <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
@@ -60,13 +58,14 @@
           <button id="register-btn" class="dropdown-item">
             <i class="fas fa-user-plus"></i> Registrarse
           </button>
+
           <button class="cart-icon" id="cart-btn">
             <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
           </button>
 
-          <!-- Perfil con menú desplegable -->
+          <!-- PERFIL -->
           <div class="perfil-container">
-            <button class="nav-link perfil-btn" data-section="perfil">
+            <button class="nav-link perfil-btn">
               <i class="fas fa-user"></i> Perfil
             </button>
             <div class="perfil-menu" id="perfil-menu">
@@ -87,15 +86,65 @@
   <!-- CONTENIDO PRINCIPAL -->
   <!-- ===================== -->
   <main>
-    <h1>Productos de Billeteras</h1>
-    <div class="products-grid"></div>
+    <section class="catalogo-general">
+      <h1>Catálogo de Productos</h1>
+      <p class="catalogo-descripcion">
+        Explora nuestras colecciones y elige la categoría que más te guste.
+      </p>
+
+      <!-- REJILLA DE CATEGORÍAS -->
+      <div class="categorias-grid">
+        <a href="bolso.html" class="categoria-card">
+          <img src="img/bolso.jpg" alt="Bolsos">
+          <h3>Bolsos</h3>
+        </a>
+
+        <a href="mochila.html" class="categoria-card">
+          <img src="img/mochila.jpg" alt="Mochilas">
+          <h3>Mochilas</h3>
+        </a>
+
+        <a href="cangurera.html" class="categoria-card">
+          <img src="img/cangurera.jpg" alt="Cangureras">
+          <h3>Cangureras</h3>
+        </a>
+
+        <a href="billetera.html" class="categoria-card">
+          <img src="img/billetera.jpg" alt="Billeteras">
+          <h3>Billeteras</h3>
+        </a>
+
+        <a href="lonchera.html" class="categoria-card">
+          <img src="img/lonchera.jpg" alt="Loncheras">
+          <h3>Loncheras</h3>
+        </a>
+
+        <a href="lentes.html" class="categoria-card">
+          <img src="img/lentes.jpg" alt="Lentes">
+          <h3>Lentes</h3>
+        </a>
+
+        <a href="multiusos.html" class="categoria-card">
+          <img src="img/multiusos.jpg" alt="Multiusos">
+          <h3>Multiusos</h3>
+        </a>
+
+        <a href="estuche.html" class="categoria-card">
+          <img src="img/estuche.jpg" alt="Estuches">
+          <h3>Estuches</h3>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ===================== -->
   <!-- SCRIPTS -->
   <!-- ===================== -->
-  <script type="module" src="productos-categoria.js"></script>
   <script src="navigation.js"></script>
+  <script src="menu-despegable.js"></script>
   <script src="Barra-busqueda.js"></script>
+   <script src="data.js"></script>
+   <script src="products.js"></script>
+  
 </body>
 </html>
