@@ -56,3 +56,34 @@
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+/* ============================================= */
+/* FORMULARIO REGISTRARSE - Mostrar/Ocultar Contraseña */
+/* ============================================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 2.5rem; /* espacio para el ícono */
+}
+
+/* Ícono del ojo */
+.password-wrapper i {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+/* Hover del ícono */
+.password-wrapper i:hover {
+    color: var(--primary-color);
+}
+

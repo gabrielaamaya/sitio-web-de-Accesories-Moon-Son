@@ -136,67 +136,85 @@
             </div>
         </section>
 
-      <!-- Sección  Sesión -->
+
+<!-- Sección Iniciar Sesión -->
 <section id="iniciar-sesion">
-    <h2>Iniciar Sesión</h2>
+  <h2>Iniciar Sesión</h2>
 
-    <!-- Contenedor de imagen o GIF -->
-    <div class="login-image">
-        <img src="perfil.gif" alt="Animación de inicio de sesión" />
-    </div>
+  <!-- Contenedor de imagen o GIF -->
+  <div class="login-image">
+    <img src="perfil.gif" alt="Animación de inicio de sesión" />
+  </div>
 
-    <div class="form-container">
-        <form id="login-form">
-            <div class="form-group">
-                <label for="login-email">Correo Electrónico</label>
-                <input type="email" id="login-email" required>
-            </div>
-            <div class="form-group" style="position: relative;">
-                <label for="login-password">Contraseña</label>
-                <input type="password" id="login-password" required>
-                <!-- 🔹 Ícono para mostrar/ocultar contraseña -->
-                <i class="fa-solid fa-eye" id="togglePassword" 
-                   style="position: absolute; right: 10px; top: 38px; cursor: pointer; color: #666;"></i>
-            </div>
-            <button type="submit" class="btn">Iniciar Sesión</button>
-        </form>
-        <p style="text-align: center; margin-top: 1rem;">
-            <span>¿No tienes cuenta?</span>
-            <a href="#" id="go-to-register">Regístrate aquí</a>
-        </p>
-    </div>
+  <div class="form-container">
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">Correo Electrónico</label>
+        <input type="email" id="login-email" required>
+      </div>
+      <div class="form-group" style="position: relative;">
+        <label for="login-password">Contraseña</label>
+        <input type="password" id="login-password" required>
+        <!-- Ícono para mostrar/ocultar contraseña -->
+        <i class="fa-solid fa-eye" id="togglePassword"
+          style="position: absolute; right: 10px; top: 38px; cursor: pointer; color: #666;"></i>
+      </div>
+      <button type="submit" class="btn">Iniciar Sesión</button>
+    </form>
+    <p style="text-align: center; margin-top: 1rem;">
+      <span>¿No tienes cuenta?</span>
+      <a href="#" id="go-to-register">Regístrate aquí</a>
+    </p>
+  </div>
 </section>
 
+<!-- Sección Crear Cuenta -->
+<section id="crear-cuenta">
+  <h2>Registrar</h2>
+  <div class="form-container">
+    <form id="register-form">
+      <div class="form-group">
+        <label for="register-name">Nombre Completo</label>
+        <input type="text" id="register-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-email">Correo Electrónico</label>
+        <input type="email" id="register-email" required>
+      </div>
+
+      <!-- Campo Contraseña con ícono -->
+      <div class="form-group">
+        <label for="register-password">Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="register-password" required>
+          <i class="fa-solid fa-eye" id="toggleRegisterPassword"></i>
+        </div>
+      </div>
+
+      <!-- Campo Confirmar Contraseña con ícono -->
+      <div class="form-group">
+        <label for="register-confirm">Confirmar Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="register-confirm" required>
+          <i class="fa-solid fa-eye" id="toggleRegisterConfirm"></i>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Crear Cuenta</button>
+    </form>
+
+    <p style="text-align: center; margin-top: 1rem;">
+      <span>¿Ya tienes cuenta?</span>
+      <a href="#" id="go-to-login">Inicia sesión aquí</a>
+    </p>
+  </div>
+</section>
+
+<!-- Font Awesome para el ícono del ojo -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-        <!-- Sección Crear Cuenta -->
-        <section id="crear-cuenta">
-            <h2>Registrar </h2>
-            <div class="form-container">
-                <form id="register-form">
-                    <div class="form-group">
-                        <label for="register-name">Nombre Completo</label>
-                        <input type="text" id="register-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-email">Correo Electrónico</label>
-                        <input type="email" id="register-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-password">Contraseña</label>
-                        <input type="password" id="register-password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-confirm">Confirmar Contraseña</label>
-                        <input type="password" id="register-confirm" required>
-                    </div>
-                    <button type="submit" class="btn">Crear Cuenta</button>
-                </form>
-                <p style="text-align: center; margin-top: 1rem;">
-                    <span>¿Ya tienes cuenta?</span> <a href="#" id="go-to-login">Inicia sesión aquí</a>
-                </p>
-            </div>
-        </section>
 
         <!-- Sección Catálogo -->
         <section id="catalogo">
