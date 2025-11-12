@@ -306,3 +306,86 @@
 .carousel-dot.active {
     background: var(--secondary-color);
 }
+
+
+/* ============================================= */
+/*🎨 MODAL DE CONFIRMACIÓN DE COMPRA (CORREGIDO Y COMPACTO) 
+/* ============================================= */
+
+/* ===== 🟣 CONTENEDOR DEL MODAL (FONDO OSCURO SEMITRANSPARENTE) ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  z-index: 999;
+}
+
+/* ===== 🟠 CAJA INTERNA DEL MODAL (CUADRO CENTRAL) ===== */
+.modal-content {
+  background-color: #1E3A8A;             /* 🟢 CAMBIO: color azul de fondo */
+  color: #FBBF24;                        /* 🟢 CAMBIO: texto amarillo */
+  padding: 1.5rem 2rem;                  
+  border-radius: 15px;                   
+  text-align: center;                    
+  max-width: 400px;                      
+  width: 90%;
+  max-height: 220px;                     
+  display: flex;
+  flex-direction: column;
+  justify-content: center;               
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: aparecer 0.3s ease;
+}
+
+/* ===== 🟢 ANIMACIÓN DE APARICIÓN DEL MODAL ===== */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== 🔵 CONTENEDOR DE LOS BOTONES ===== */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;                    
+}
+
+/* ===== 🟡 ESTILO GENERAL DE LOS BOTONES ===== */
+.modal-buttons button {
+  background-color: #F3F4F6;             /* 🟢 CAMBIO: fondo blanco */
+  border: none;
+  color: #1E3A8A;                        /* 🟢 CAMBIO: texto azul */
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/* ===== 🟠 EFECTO HOVER DE BOTONES ===== */
+.modal-buttons button:hover {
+  background-color: #E5E7EB;             /* 🟢 CAMBIO: tono blanco más oscuro en hover */
+}
+
+/* ===== 🔴 BOTÓN “CANCELAR” ===== */
+.modal-buttons #confirm-no {
+  background-color: #F3F4F6;             /* 🟢 CAMBIO: mismo fondo blanco */
+  color: #1E3A8A;                        /* 🟢 CAMBIO: texto azul */
+}
+
+.modal-buttons #confirm-no:hover {
+  background-color: #E5E7EB;             /* 🟢 CAMBIO: mismo hover blanco tenue */
+}
