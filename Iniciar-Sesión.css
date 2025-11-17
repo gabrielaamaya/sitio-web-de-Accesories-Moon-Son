@@ -53,9 +53,137 @@
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
-/* Estado focus en campos de formulario */
+/* Estado focus */
 .form-group input:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(30,58,138,0.2);
+}
+
+/* ============================================= */
+/* BOTÓN INICIAR SESIÓN – IGUAL ESTILO QUE GOOGLE */
+/* ============================================= */
+
+.login-btn {
+    width: 100%;
+    padding: 0.6rem 0.8rem; /* Igual al botón Google */
+    background-color: #FBBF24; 
+    color: #1E3A8A; 
+    border: 1px solid #FBBF24;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    margin-bottom: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e0a71f; 
+}
+
+/* ============================================= */
+/* ENLACE "¿Olvidaste tu contraseña?" */
+/* ============================================= */
+
+.forgot-password {
+    text-align: right;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================= */
+/* BOTÓN GOOGLE */
+/* ============================================= */
+
+.google-login {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: #FBBF24;
+  color: #1E3A8A;
+  border: 1px solid #FBBF24;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.google-btn i {
+  font-size: 18px;
+}
+
+/* ============================================= */
+/* SEPARADOR ENTRE BOTONES */
+/* ============================================= */
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--border-color);
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.separator span {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ============================================= */
+/* ENLACE DE REGISTRO */
+/* ============================================= */
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
 }
