@@ -171,8 +171,20 @@
         <button type="submit" class="login-btn">Iniciar Sesión</button>
 
         <!-- Botón Google -->
-        <button type="button" class="google-btn">
-          <i class="fa-brands fa-google" style="font-size:20px;"></i>
+        <button type="button" class="google-btn" id="btn-google">
+
+          <!-- SVG DEL LOGO DE GOOGLE -->
+          <svg width="20" style="margin-right:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <path fill="#EA4335"
+              d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.02 17.74 9.5 24 9.5z" />
+            <path fill="#4285F4"
+              d="M46.5 24.5c0-1.57-.15-3.09-.45-4.5H24v9h12.65c-.55 2.96-2.25 5.48-4.81 7.18l7.49 5.82C43.77 37.61 46.5 31.51 46.5 24.5z" />
+            <path fill="#FBBC05"
+              d="M10.54 28.41A14.43 14.43 0 0 1 9.5 24c0-1.53.26-3.01.73-4.41l-7.98-6.19A23.85 23.85 0 0 0 0 24c0 3.89.93 7.56 2.56 10.86l7.98-6.45z" />
+            <path fill="#34A853"
+              d="M24 48c6.48 0 11.99-2.15 15.98-5.85l-7.49-5.82C30.26 38.29 27.24 39.5 24 39.5c-6.27 0-11.57-3.52-13.46-8.91l-7.98 6.45C6.51 42.62 14.62 48 24 48z" />
+          </svg>
+
           Iniciar sesión con Google
         </button>
 
@@ -193,6 +205,73 @@
 
   </div>
 </section>
+
+
+<!-- ===================================================== -->
+<!-- ========= MODAL GOOGLE LOGIN (ESTILO GOOGLE) ========= -->
+<!-- ===================================================== -->
+<div id="google-modal" class="modal">
+  <div class="modal-content">
+    
+    <span class="close">&times;</span>
+
+    <div class="login-container">
+      <div class="login-card">
+
+        <!-- LOGO GOOGLE SVG (REEMPLAZANDO LA IMAGEN) -->
+        <svg class="brand-logo" width="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+          <path fill="#EA4335"
+            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.02 17.74 9.5 24 9.5z" />
+          <path fill="#4285F4"
+            d="M46.5 24.5c0-1.57-.15-3.09-.45-4.5H24v9h12.65c-.55 2.96-2.25 5.48-4.81 7.18l7.49 5.82C43.77 37.61 46.5 31.51 46.5 24.5z" />
+          <path fill="#FBBC05"
+            d="M10.54 28.41A14.43 14.43 0 0 1 9.5 24c0-1.53.26-3.01.73-4.41l-7.98-6.19A23.85 23.85 0 0 0 0 24c0 3.89.93 7.56 2.56 10.86l7.98-6.45z" />
+          <path fill="#34A853"
+            d="M24 48c6.48 0 11.99-2.15 15.98-5.85l-7.49-5.82C30.26 38.29 27.24 39.5 24 39.5c-6.27 0-11.57-3.52-13.46-8.91l-7.98 6.45C6.51 42.62 14.62 48 24 48z" />
+        </svg>
+
+        <h2>Elegir una cuenta</h2>
+        <p class="subtitle">para continuar</p>
+
+        <div class="account-option">
+          <img src="perfil.jpg" class="profile-pic" alt="Foto">
+          <div class="info">
+            <span class="name">Gabriela Garay</span>
+            <span class="email">amayagabriela073@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="other-account">
+          <span>Usar otra cuenta</span>
+        </div>
+
+        <p class="footer-text">
+          Antes de continuar, revisa nuestra 
+          <a href="#">política de privacidad</a>
+          y
+          <a href="#">condiciones del servicio</a>.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Sección Crear Cuenta -->
@@ -478,6 +557,7 @@
     <script src="Barra-busqueda.js"></script>
     <script src="metodo-pago.js"></script>
     <script src="visualizacion-contraseña.js"></script>
+    <script src="google.js"></script>
 
 </body>
 </html>
