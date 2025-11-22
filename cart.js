@@ -1,5 +1,25 @@
-// ===== FUNCIONES DEL CARRITO =====
+/* =========================================================
+    VALIDACIÓN DE SESIÓN (AGREGADO)
+   ========================================================= */
+function isLoggedIn() {
+    return localStorage.getItem('currentUser') !== null;
+}
+
+/* =========================================================
+    FUNCIONES DEL CARRITO
+   ========================================================= */
 function addToCart(productId) {
+
+    /* =========================================================
+        VALIDACIÓN PARA PERMITIR SOLO USUARIOS LOGEADOS
+       ========================================================= */
+    if (!isLoggedIn()) {
+        showNotification("Debes iniciar sesión para agregar al carrito", "error");
+        showSection('iniciar-sesion'); 
+        return;
+    }
+    /* ========================== FIN AGREGADO ========================== */
+
     const product = products.find(p => p.id === productId);
     if (!product) return;
     

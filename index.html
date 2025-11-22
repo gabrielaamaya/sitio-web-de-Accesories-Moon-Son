@@ -136,7 +136,10 @@
             </div>
         </section>
 
-<!-- Sección Iniciar Sesión -->
+
+
+
+        <!-- Sección Iniciar Sesión -->
 <section id="iniciar-sesion">
   <h2>Iniciar Sesión</h2>
 
@@ -159,12 +162,12 @@
         <label for="login-password">Contraseña</label>
         <input type="password" id="login-password" required>
 
-        <!-- Ícono para mostrar/ocultar -->
+        <!-- Ícono para mostrar/ocultar contraseña -->
         <i class="fa-solid fa-eye" id="togglePassword"
           style="position: absolute; right: 10px; top: 38px; cursor: pointer; color: #666;"></i>
       </div>
 
-      <!-- 🔵 Contenedor para poner los dos botones A LA PAR -->
+      <!-- Botones lado a lado -->
       <div class="login-buttons">
 
         <!-- Botón Iniciar Sesión -->
@@ -172,8 +175,7 @@
 
         <!-- Botón Google -->
         <button type="button" class="google-btn" id="btn-google">
-
-          <!-- SVG DEL LOGO DE GOOGLE -->
+          <!-- SVG del logo de Google -->
           <svg width="20" style="margin-right:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
             <path fill="#EA4335"
               d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.02 17.74 9.5 24 9.5z" />
@@ -184,13 +186,12 @@
             <path fill="#34A853"
               d="M24 48c6.48 0 11.99-2.15 15.98-5.85l-7.49-5.82C30.26 38.29 27.24 39.5 24 39.5c-6.27 0-11.57-3.52-13.46-8.91l-7.98 6.45C6.51 42.62 14.62 48 24 48z" />
           </svg>
-
           Iniciar sesión con Google
         </button>
 
       </div>
 
-      <!-- 🔵 Olvidé contraseña centrado abajo -->
+      <!-- Olvidé contraseña -->
       <p class="forgot-password">
         <a href="#">¿Olvidaste tu contraseña?</a>
       </p>
@@ -207,18 +208,19 @@
 </section>
 
 
+
 <!-- ===================================================== -->
-<!-- ========= MODAL GOOGLE LOGIN (ESTILO GOOGLE) ========= -->
+<!-- ========== MODAL GOOGLE LOGIN (ESTILO GOOGLE) ======== -->
 <!-- ===================================================== -->
 <div id="google-modal" class="modal">
   <div class="modal-content">
-    
+
     <span class="close">&times;</span>
 
     <div class="login-container">
       <div class="login-card">
 
-        <!-- LOGO GOOGLE SVG (REEMPLAZANDO LA IMAGEN) -->
+        <!-- Logo Google -->
         <svg class="brand-logo" width="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
           <path fill="#EA4335"
             d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.02 17.74 9.5 24 9.5z" />
@@ -233,6 +235,7 @@
         <h2>Elegir una cuenta</h2>
         <p class="subtitle">para continuar</p>
 
+        <!-- Cuenta guardada -->
         <div class="account-option">
           <img src="perfil.jpg" class="profile-pic" alt="Foto">
           <div class="info">
@@ -241,7 +244,15 @@
           </div>
         </div>
 
-        <div class="other-account">
+        <!-- BOTÓN CORREGIDO CON ÍCONO -->
+        <div class="other-account" id="btn-use-account">
+
+          <!-- Ícono de usuario estilo Google -->
+          <svg class="icon-user" width="22" height="22" viewBox="0 0 24 24">
+            <path fill="#ffffff"
+              d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
+          </svg>
+
           <span>Usar otra cuenta</span>
         </div>
 
@@ -255,6 +266,8 @@
       </div>
     </div>
 
+  </div>
+</div>
   </div>
 </div>
 
@@ -501,15 +514,30 @@
         </section>
     </main>
 
-    <!-- Modal para detalles del producto -->
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div id="modal-product-details">
-                <!-- Los detalles del producto se cargarán aquí con JavaScript -->
-            </div>
+   <!-- Modal para detalles del producto -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+
+        <!-- Botón cerrar -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Contenedor interno -->
+        <div id="modal-product-details">
+            <!-- Los detalles del producto se cargarán aquí con JavaScript -->
         </div>
+
     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer>
@@ -558,6 +586,7 @@
     <script src="metodo-pago.js"></script>
     <script src="visualizacion-contraseña.js"></script>
     <script src="google.js"></script>
+    
 
 </body>
 </html>

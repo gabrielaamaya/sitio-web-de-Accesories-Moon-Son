@@ -1,67 +1,72 @@
-/* ============================================= */
-/* MODAL PARA DETALLES DEL PRODUCTO */
-/* ============================================= */
+/* ========================================================= */
+/* ===============   MODAL DE DETALLES PRODUCTO   =========== */
+/* ========================================================= */
 
-/* Fondo del modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn 0.3s;
-}
 
-/* Contenido del modal */
+
+/* ========================================================= */
+/* ================= CONTENEDOR DEL CONTENIDO =============== */
+/* ========================================================= */
+
 .modal-content {
     background-color: var(--card-bg);
-    margin: 3% auto;
     padding: 0;
     border-radius: var(--border-radius);
-    width: 95%;
-    max-width: 1000px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+
+    /* 🔥 Modal completamente ancho */
+    width: 95vw;
+    max-width: 95vw;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
     position: relative;
     animation: slideIn 0.3s;
-    min-height: 600px;
+
+    /* 🟢 CENTRAR SIEMPRE */
+    margin: auto;
 }
 
-/* Botón cerrar modal */
+/* ========================================================= */
+/* ===================== BOTÓN CERRAR ======================= */
+/* ========================================================= */
+
 .close-modal {
     position: absolute;
     top: 20px;
     right: 25px;
+
     color: var(--text-color);
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10;
-    transition: color 0.3s;
+
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     width: 40px;
     height: 40px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    transition: color 0.3s, background 0.3s;
 }
 
-/* Efecto hover en botón cerrar */
 .close-modal:hover {
     color: var(--secondary-color);
-    background: rgba(255, 255, 255, 1);
+    background: rgb(255, 255, 255);
 }
 
-/* Detalles del producto en modal */
+/* ========================================================= */
+/* ================== CONTENIDO INTERNO ===================== */
+/* ========================================================= */
+
 #modal-product-details {
     padding: 2.5rem;
 }
 
-/* Contenedor principal del producto en modal */
+/* Contenedor principal que divide imágenes + información */
 .modal-product-container {
     display: flex;
     gap: 3rem;
@@ -69,14 +74,16 @@
     flex-wrap: wrap;
 }
 
-/* Imagen del producto en modal */
+/* ========================================================= */
+/* ==================== IMAGEN PRODUCTO ===================== */
+/* ========================================================= */
+
 .modal-product-image {
     flex: 1;
     min-width: 400px;
     max-width: 500px;
 }
 
-/* Imagen dentro del modal */
 .modal-product-image img {
     width: 100%;
     height: 400px;
@@ -85,39 +92,104 @@
     box-shadow: var(--box-shadow);
 }
 
-/* Información del producto en modal */
+/* ========================================================= */
+/* ===================== INFO PRODUCTO ====================== */
+/* ========================================================= */
+
 .modal-product-info {
     flex: 1;
     min-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Título del producto en modal */
 .modal-product-info h2 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 2rem;
     font-weight: 700;
 }
 
-/* Precio en modal */
 .modal-product-price {
     font-size: 1.8rem;
     color: var(--secondary-color);
     font-weight: bold;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     padding: 0.5rem 0;
     border-bottom: 2px solid var(--border-color);
 }
 
-/* Descripción del producto */
 .modal-product-description {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     line-height: 1.7;
     font-size: 1.1rem;
     color: var(--text-color);
+    flex-grow: 1;
 }
 
-/* Acciones del producto en modal */
+.modal-product-availability {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* ========================================================= */
+/* ==================== SELECTOR CANTIDAD =================== */
+/* ========================================================= */
+
+.modal-quantity-container {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modal-quantity-container label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.modal-quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.modal-quantity-selector button {
+    background: var(--light-color);
+    border: none;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.3s;
+}
+
+.modal-quantity-selector button:hover {
+    background: #e0e0e0;
+}
+
+.modal-quantity-selector input {
+    width: 50px;
+    height: 35px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    background: white;
+}
+
+/* ========================================================= */
+/* ====================== ACCIONES ========================== */
+/* ========================================================= */
+
 .modal-product-actions {
     display: flex;
     gap: 1.5rem;
@@ -125,7 +197,6 @@
     flex-wrap: wrap;
 }
 
-/* Botones en modal */
 .modal-product-actions .btn {
     flex: 1;
     min-width: 180px;
@@ -133,104 +204,58 @@
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-/* Características del producto */
-.modal-product-features {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--border-color);
-    background: var(--light-color);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-}
-
-/* Título de características */
-.modal-product-features h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-/* Lista de características */
-.modal-product-features ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-/* Items de características */
-.modal-product-features li {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Icono check antes de cada característica */
-.modal-product-features li:before {
-    content: "✓";
-    color: var(--secondary-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-/* Botón específico agregar al carrito en modal */
+/* Botón agregar al carrito */
 #modal-add-to-cart {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: 2px solid var(--secondary-color);
 }
 
-/* Efecto hover en botón agregar al carrito modal */
 #modal-add-to-cart:hover {
     background-color: #e0a912;
     border-color: #e0a912;
 }
 
-/* Botón específico cerrar en modal */
+/* Botón cerrar */
 #modal-close-btn {
     background-color: var(--primary-color);
     color: white;
     border: 2px solid var(--primary-color);
 }
 
-/* Efecto hover en botón cerrar modal */
 #modal-close-btn:hover {
     background-color: #142860;
     border-color: #142860;
 }
 
-/* ============================================= */
-/* ANIMACIONES PARA MODAL */
-/* ============================================= */
+/* ========================================================= */
+/* ===================== ANIMACIONES ======================== */
+/* ========================================================= */
 
-/* Animación de fade in */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Animación de slide in desde arriba */
 @keyframes slideIn {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* ============================================= */
-/* CARRUSEL DENTRO DEL MODAL */
-/* ============================================= */
+/* ========================================================= */
+/* ======================== CARRUSEL ======================== */
+/* ========================================================= */
 
 .carousel-container {
     position: relative;
     width: 100%;
     height: 400px;
+
     overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -248,7 +273,6 @@
     height: 400px;
     object-fit: cover;
     flex-shrink: 0;
-    border-radius: var(--border-radius);
 }
 
 /* Botones del carrusel */
@@ -256,18 +280,23 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
     background-color: rgba(255,255,255,0.8);
     border: none;
     border-radius: 50%;
-    font-size: 1.8rem;
-    cursor: pointer;
+
     width: 45px;
     height: 45px;
+    font-size: 1.8rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: var(--primary-color);
+    cursor: pointer;
     transition: background 0.3s, color 0.3s;
+
     z-index: 5;
 }
 
@@ -276,15 +305,10 @@
     color: white;
 }
 
-.carousel-btn.prev {
-    left: 10px;
-}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
-.carousel-btn.next {
-    right: 10px;
-}
-
-/* Indicadores (puntos) */
+/* Indicadores */
 .carousel-dots {
     position: absolute;
     bottom: 15px;
@@ -307,85 +331,26 @@
     background: var(--secondary-color);
 }
 
+/* ========================================================= */
+/* ======================= RESPONSIVE ======================= */
+/* ========================================================= */
 
-/* ============================================= */
-/*🎨 MODAL DE CONFIRMACIÓN DE COMPRA (CORREGIDO Y COMPACTO) 
-/* ============================================= */
+@media (max-width: 900px) {
+    .modal-product-container {
+        flex-direction: column;
+    }
+    
+    .modal-product-image, 
+    .modal-product-info {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .modal-content {
+        width: 95vw;
+        max-width: 95vw;
 
-/* ===== 🟣 CONTENEDOR DEL MODAL (FONDO OSCURO SEMITRANSPARENTE) ===== */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
-  z-index: 999;
-}
-
-/* ===== 🟠 CAJA INTERNA DEL MODAL (CUADRO CENTRAL) ===== */
-.modal-content {
-  background-color: #1E3A8A;             /* 🟢 CAMBIO: color azul de fondo */
-  color: #FBBF24;                        /* 🟢 CAMBIO: texto amarillo */
-  padding: 1.5rem 2rem;                  
-  border-radius: 15px;                   
-  text-align: center;                    
-  max-width: 400px;                      
-  width: 90%;
-  max-height: 220px;                     
-  display: flex;
-  flex-direction: column;
-  justify-content: center;               
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  animation: aparecer 0.3s ease;
-}
-
-/* ===== 🟢 ANIMACIÓN DE APARICIÓN DEL MODAL ===== */
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ===== 🔵 CONTENEDOR DE LOS BOTONES ===== */
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.2rem;                    
-}
-
-/* ===== 🟡 ESTILO GENERAL DE LOS BOTONES ===== */
-.modal-buttons button {
-  background-color: #F3F4F6;             /* 🟢 CAMBIO: fondo blanco */
-  border: none;
-  color: #1E3A8A;                        /* 🟢 CAMBIO: texto azul */
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-/* ===== 🟠 EFECTO HOVER DE BOTONES ===== */
-.modal-buttons button:hover {
-  background-color: #E5E7EB;             /* 🟢 CAMBIO: tono blanco más oscuro en hover */
-}
-
-/* ===== 🔴 BOTÓN “CANCELAR” ===== */
-.modal-buttons #confirm-no {
-  background-color: #F3F4F6;             /* 🟢 CAMBIO: mismo fondo blanco */
-  color: #1E3A8A;                        /* 🟢 CAMBIO: texto azul */
-}
-
-.modal-buttons #confirm-no:hover {
-  background-color: #E5E7EB;             /* 🟢 CAMBIO: mismo hover blanco tenue */
+        /* 🟢 CENTRADO EN MÓVIL */
+        margin: auto;
+    }
 }

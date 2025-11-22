@@ -4,7 +4,7 @@
 
 /* ===== Fondo del modal (oculto al inicio) ===== */
 .modal {
-  display: none; /* ⬅⬅⬅ Importante: inicia oculto */
+  display: none; /* ⬅ inicia oculto */
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -13,16 +13,16 @@
   height: 100%;
   background: rgba(0,0,0,0.6);
 
-  /* Centra el contenido sin volver a activar display */
+  /* Centrado del modal */
   justify-content: center;
   align-items: center;
 
   padding: 20px;
 }
 
-/* ===== Contenedor blanco del modal ===== */
+/* ===== Contenedor principal ===== */
 .modal-content {
-  background: #fff;
+  background: #F3F4F6; /* Fondo blanco gris */
   width: 380px;
   border-radius: 12px;
   padding: 25px;
@@ -30,7 +30,7 @@
   animation: aparecer 0.3s ease;
 }
 
-/* ===== Animación suave al aparecer ===== */
+/* ===== Animación suave ===== */
 @keyframes aparecer {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -43,11 +43,11 @@
   top: 10px;
   font-size: 26px;
   cursor: pointer;
-  color: #143c96; /* azul discreto */
+  color: #143c96;
 }
 
 /* ===================================================== */
-/* ==================   CONTENIDO DEL MODAL ============ */
+/* =============== CONTENIDO DEL LOGIN ================== */
 /* ===================================================== */
 
 /* Contenedor general */
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-/* Logo de marca */
+/* Logo de Google */
 .brand-logo {
   width: 60px;
   margin-bottom: 10px;
@@ -74,7 +74,10 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Opción de cuenta */
+/* ===================================================== */
+/* =========== OPCIÓN DE CUENTA GUARDADA ================ */
+/* ===================================================== */
+
 .account-option {
   display: flex;
   align-items: center;
@@ -85,6 +88,7 @@ h2 {
   cursor: pointer;
   margin-bottom: 15px;
   transition: 0.2s;
+  background: #ffffff;
 }
 
 .account-option:hover {
@@ -98,37 +102,59 @@ h2 {
   border-radius: 50%;
 }
 
-/* Contenedor de texto */
+/* Texto de la cuenta */
 .info {
   text-align: left;
 }
 
-/* Nombre de la cuenta */
 .name {
   font-weight: bold;
   display: block;
 }
 
-/* Correo */
 .email {
   font-size: 13px;
   color: gray;
 }
 
-/* Botón “usar otra cuenta” */
+/* ===================================================== */
+/* ============== BOTÓN USAR OTRA CUENTA ================ */
+/* ===================================================== */
+
 .other-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
+  background: #F3F4F6; /* Fondo solicitado */
 }
 
+/* Hover */
 .other-account:hover {
-  background: #f0f0f0;
+  background: #e6e7e9;
 }
 
-/* Texto de abajo */
+/* Icono azul Google */
+.icon-user path {
+  fill: #1a73e8 !important; /* Azul Google */
+}
+
+/* Texto igual al nombre */
+.other-account span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #143c96;    /* mismo color azul que el nombre */
+}
+
+
+/* ===================================================== */
+/* ==================   FOOTER   ======================== */
+/* ===================================================== */
+
 .footer-text {
   margin-top: 20px;
   font-size: 12px;
