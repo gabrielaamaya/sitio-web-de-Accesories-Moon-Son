@@ -19,6 +19,8 @@ function handleLogin(e) {
 
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         showNotification(`¡Bienvenido, ${foundUser.name}!`);
+
+        // 🔥🔹 REDIRECCIÓN A INICIO (AL INICIAR SESIÓN)
         showSection('inicio');
 
         updateUserInterface();
@@ -38,6 +40,7 @@ function handleLogout() {
     currentUser = null;
     localStorage.removeItem('currentUser');
     showNotification("Sesión cerrada");
+
     showSection('inicio');
 
     restoreOriginalButtons();
@@ -68,13 +71,11 @@ function handleRegister(e) {
     const password = document.getElementById('register-password').value.trim();
     const confirmPassword = document.getElementById('register-confirm').value.trim();
 
-    // Validar coincidencia
     if (password !== confirmPassword) {
         showNotification("Las contraseñas no coinciden", 'error');
         return;
     }
 
-    // VALIDACIÓN DE CONTRASEÑA FUERTE
     if (!isStrongPassword(password)) {
         showNotification(
             "La contraseña debe incluir: 1 mayúscula, 1 minúscula, 1 número, 1 carácter especial y mínimo 8 caracteres.",
@@ -95,16 +96,13 @@ function handleRegister(e) {
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
 
-        currentUser = { name, email, phone: '' };
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
         showNotification(`¡Cuenta creada exitosamente, ${name}!`);
-        showSection('inicio');
-
-        updateUserInterface();
-        fillUserProfile();
 
         registerForm.reset();
+
+        // 🔥🔹 REDIRECCIÓN A INICIAR SESIÓN (AL CREAR CUENTA)
+        showSection('iniciar-sesion');
+
     } else {
         showNotification("Por favor, completa todos los campos", 'error');
     }
