@@ -1,66 +1,133 @@
 /* ============================================= */
-/* PÁGINA DE PERFIL DE USUARIO */
+/* PÁGINA DE PERFIL DE USUARIO - COMPLETO        */
 /* ============================================= */
 
-/* Contenedor principal del perfil */
-.profile-container {
-    display: flex;
-    gap: 2rem;
+/* Título centrado */
+#perfil h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
-/* Barra lateral del perfil */
+/* Contenedor principal centrado */
+.profile-container {
+    display: flex;
+    justify-content: center;       /* Centra contenido */
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ============================================= */
+/* BARRA LATERAL - ESTILO COMPLETO               */
+/* ============================================= */
 .profile-sidebar {
-    flex: 0 0 250px;
+    width: 300px;
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 1.5rem;
-    transition: background-color 0.3s;
 }
 
-/* Menú de navegación del perfil */
+/* Quitar puntos del menú */
 .profile-menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Items del menú del perfil */
+/* Separación entre items */
 .profile-menu li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Enlaces del menú del perfil */
+/* Enlaces del menú */
 .profile-menu a {
     display: block;
-    padding: 0.7rem;
-    border-radius: var(--border-radius);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
     text-decoration: none;
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-/* Estados hover y active del menú del perfil */
-.profile-menu a:hover,
-.profile-menu a.active {
+/* Hover */
+.profile-menu a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
-/* Contenido principal del perfil */
+/* ACTIVO (amarillo) */
+.profile-menu a.active {
+    background-color: var(--secondary-color);   /* Amarillo */
+    color: var(--primary-color);                /* Texto oscuro */
+}
+
+/* ============================================= */
+/* CONTENIDO PRINCIPAL DEL PERFIL                */
+/* ============================================= */
 .profile-content {
     flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    padding: 1.5rem;
-    transition: background-color 0.3s;
+    padding: 2rem;
 }
 
-/* Contenido de pestañas del perfil */
+/* Formularios centrados */
+.profile-content form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ============================================= */
+/* BOTÓN */
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* ============================================= */
+/* PESTAÑAS DE CONTENIDO */
 .profile-tab-content {
     display: none;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Pestaña activa del perfil */
 .profile-tab-content.active {
     display: block;
 }
+
