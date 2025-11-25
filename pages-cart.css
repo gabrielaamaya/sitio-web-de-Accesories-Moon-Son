@@ -1,5 +1,5 @@
 /* ============================================= */
-/* PÁGINA DEL CARRITO DE COMPRAS */
+/*           PÁGINA DEL CARRITO DE COMPRAS       */
 /* ============================================= */
 
 /* Contenedor principal del carrito */
@@ -11,6 +11,10 @@
     transition: background-color 0.3s;
 }
 
+/* ============================================= */
+/*              ITEMS DEL CARRITO                */
+/* ============================================= */
+
 /* Items individuales del carrito */
 .cart-item {
     display: flex;
@@ -19,7 +23,7 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Imagen del producto en el carrito */
+/* Imagen del producto */
 .cart-item-image {
     width: 80px;
     height: 80px;
@@ -30,19 +34,19 @@
     background-position: center;
 }
 
-/* Detalles del item del carrito */
+/* Detalles del item */
 .cart-item-details {
     flex: 1;
 }
 
-/* Título del producto en carrito */
+/* Título del producto */
 .cart-item-title {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
 
-/* Precio en carrito */
+/* Precio del producto */
 .cart-item-price {
     color: var(--secondary-color);
 }
@@ -54,7 +58,10 @@
     margin: 0 1rem;
 }
 
-/* Total del carrito */
+/* ============================================= */
+/*                 TOTAL DEL CARRITO             */
+/* ============================================= */
+
 .cart-total {
     margin-top: 1.5rem;
     text-align: right;
@@ -63,4 +70,57 @@
     padding-top: 1rem;
     border-top: 2px solid var(--border-color);
     color: var(--text-color);
+}
+
+/* ============================================= */
+/*               BOTONES INFERIORES              */
+/* ============================================= */
+
+.cart-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* BOTÓN IZQUIERDA / BOTÓN DERECHA */
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* Botones base */
+.cart-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+/* ============================================= */
+/*         BOTÓN: Seguir Comprando               */
+/* ============================================= */
+
+.btn-seguir-comprando {
+    background-color: #b0b0b0;
+    color: #ffffff;
+}
+
+.btn-seguir-comprando:hover {
+    background-color: #8d8d8d;
+}
+
+/* ============================================= */
+/*         BOTÓN: Proceso de Pago                */
+/* ============================================= */
+
+.btn-proceso-pago {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-proceso-pago:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.03);
 }

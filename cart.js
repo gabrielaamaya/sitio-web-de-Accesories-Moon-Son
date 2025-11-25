@@ -163,3 +163,18 @@ function handleCheckout() {
         showSection('inicio');
     }
 }
+
+
+
+
+/* =========================================================
+    FUNCIÓN AGREGADA → Botón "Seguir Comprando"
+   ========================================================= */
+function handleBackToCatalog() {
+    showSection('catalogo');  // Redirige al catálogo
+}
+
+/* =========================================================
+    EVENTO DEL BOTÓN
+   ========================================================= */
+document.getElementById('back-to-catalog').addEventListener('click', handleBackToCatalog);
