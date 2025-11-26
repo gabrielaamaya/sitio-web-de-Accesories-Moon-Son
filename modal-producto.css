@@ -1,0 +1,248 @@
+/* ========================================================= */
+/* ===============   MODAL DE DETALLES PRODUCTO   =========== */
+/* ========================================================= */
+
+/* Fondo del modal */
+#product-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+    animation: slideIn 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+/* Botón cerrar */
+.close-modal:hover {
+    color: var(--secondary-color);
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Contenido interno del modal */
+#modal-product-details {
+    padding: 0;
+}
+
+/* ========================================================= */
+/* ==========     DISEÑO PRINCIPAL: DOS COLUMNAS     ========= */
+/* ========================================================= */
+
+.modal-product-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Columna izquierda (imagen / carrusel) */
+.modal-product-column-left {
+    width: 65%;
+}
+
+/* AUMENTO DEL TAMAÑO DE LA IMAGEN */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;  /* ← AUMENTADO (antes 350px) */
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Botones carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 5;
+}
+
+.carousel-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Indicadores carrusel */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* ========================================================= */
+/* ==========   Columna derecha: Información     ============ */
+/* ========================================================= */
+
+.modal-product-column-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-align: center;
+}
+
+.modal-product-column-right h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.modal-product-price {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.modal-product-description {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+/* Acciones */
+.modal-product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-product-actions .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+#modal-add-to-cart {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+#modal-add-to-cart:hover {
+    background-color: #e0a912;
+    border-color: #e0a912;
+    transform: translateY(-2px);
+}
+
+#modal-close-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+#modal-close-btn:hover {
+    background-color: #142860;
+    border-color: #142860;
+    transform: translateY(-2px);
+}
+
+/* Características */
+.modal-product-features {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+.modal-product-features h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.modal-product-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-product-features li {
+    padding: 0.5rem 0;
+}
+
+.modal-product-features li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
