@@ -189,7 +189,53 @@
 }
 
 
+/* ============================================= */
+/* BOTÓN GOOGLE */
+/* ============================================= */
+.gmail-btn {
+  width: 100%;
+  background-color: #ffcc00;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1E3A8A; /* Azul oscuro igual al estilo de Google */
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.gmail-btn:hover {
+  background-color: #e6b800;
+}
 
 
 
+
+
+
+
+/* ============================================= */
+/* modal de codigo de verificacion */
+/* ============================================= */
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
 

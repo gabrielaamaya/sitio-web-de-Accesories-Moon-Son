@@ -1,63 +1,39 @@
-// ==========================================================
-// =========== MODAL GOOGLE (ABRIR / CERRAR) ================
-// ==========================================================
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js';
 
-const modalGoogle = document.getElementById("google-modal");
-const btnGoogle = document.getElementById("btn-google");
-const closeGoogle = document.querySelector(".close");
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
+};
 
-// Abrir modal Google
-btnGoogle.addEventListener("click", () => {
-  modalGoogle.style.display = "flex";
-});
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const analytics = getAnalytics(app);
 
-// Cerrar modal Google (X)
-closeGoogle.addEventListener("click", () => {
-  modalGoogle.style.display = "none";
-});
+// Función para iniciar sesión con Google
+function signInWithGoogle() {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const user = result.user;
+      console.log('Usuario autenticado con Google:', user);
+      window.location.href = "usuario.html";
+    })
+    .catch((error) => {
+      console.error("Error al iniciar sesión con Google: ", error.message);
+      alert("Error al iniciar sesión con Google: " + error.message);
+    });
+}
 
-// Cerrar Google modal si clic fuera
-window.addEventListener("click", (e) => {
-  if (e.target === modalGoogle) {
-    modalGoogle.style.display = "none";
-  }
-});
+// Asignar evento al botón de Google
+document.getElementById("btn-google").addEventListener("click", signInWithGoogle);
 
-
-// ==========================================================
-// ======= ABRIR MODAL OTP DESDE OPCIONES DE CUENTA =========
-// ==========================================================
-
-// Elementos
-const accountOption = document.querySelector(".account-option"); // cuenta guardada
-const useOtherAccount = document.getElementById("btn-use-account"); // botón "Usar otra cuenta"
-const secondModal = document.getElementById("second-modal");
-const closeSecond = document.querySelector(".close-second");
-
-// Abrir OTP al hacer clic en cuenta guardada
-accountOption.addEventListener("click", () => {
-  modalGoogle.style.display = "none";
-  secondModal.style.display = "flex";
-});
-
-// Abrir OTP al hacer clic en "Usar otra cuenta" (corregido)
-useOtherAccount.addEventListener("click", () => {
-  modalGoogle.style.display = "none";
-  secondModal.style.display = "flex";
-});
-
-// Cerrar modal OTP (X)
-closeSecond.addEventListener("click", () => {
-  secondModal.style.display = "none";
-});
-
-// Cerrar OTP modal si clic fuera
-window.addEventListener("click", (e) => {
-  if (e.target === secondModal) {
-    secondModal.style.display = "none";
-  }
-});
-
-
-
-
+console.log('Autenticación con Google habilitada.');

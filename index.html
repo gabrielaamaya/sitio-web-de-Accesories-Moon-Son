@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
  <!-- Header y Navegación -->
 <header>
   <div class="container">
@@ -18,13 +17,11 @@
       <div class="logo-container">
         <div class="logo">Moon & Sun</div>
       </div>
-
       <!-- 🟣 ENLACES DE NAVEGACIÓN -->
       <ul class="nav-links" id="menu">
         <li><a href="#" class="nav-link" data-section="inicio">Inicio</a></li>
         <li><a href="#" class="nav-link" data-section="catalogo">Catálogo</a></li>
       </ul>
-
       <!-- 🟣 BARRA DE BÚSQUEDA CON SUGERENCIAS -->
       <div class="search-container">
         <i class="fas fa-search"></i>
@@ -49,7 +46,6 @@
         </div>
       </div>
       <!-- 🔍 Fin de barra de búsqueda -->
-
       <!-- 🟣 ACCIONES DE USUARIO -->
       <div class="user-actions">
         <!-- Botones originales (se ocultarán visualmente, pero siguen en el DOM) -->
@@ -59,17 +55,14 @@
         <button id="register-btn" class="dropdown-item">
           <i class="fas fa-user-plus"></i> Registrarse
         </button>
-
         <button class="cart-icon" id="cart-btn">
           <i class="fas fa-shopping-cart"></i> Carrito <span class="cart-count">0</span>
         </button>
-
         <!-- Botón de perfil -->
         <div class="perfil-container">
           <button class="nav-link perfil-btn" data-section="perfil">
             <i class="fas fa-user"></i> Perfil
           </button>
-
           <!-- Menú desplegable -->
           <div class="perfil-menu" id="perfil-menu">
             <button id="login-btn-dropdown">
@@ -82,15 +75,12 @@
             <button id="logout-btn" class="dropdown-item" style="display:none;">
   <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
 </button>
-
           </div>
         </div>
       </div>
     </nav>
   </div>
 </header>
-
-
 <!-- Agregar Font Awesome -->
 <link
   rel="stylesheet"
@@ -99,8 +89,6 @@
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
-
-
     <main class="container">
         <!-- Sección Inicio -->
         <section id="inicio" class="active">
@@ -142,37 +130,29 @@
         <!-- Sección Iniciar Sesión -->
 <section id="iniciar-sesion">
   <h2>Iniciar Sesión</h2>
-
   <!-- Contenedor de imagen o GIF -->
   <div class="login-image">
     <img src="perfil.gif" alt="Animación de inicio de sesión" />
   </div>
-
   <div class="form-container">
     <form id="login-form">
-
       <!-- Correo -->
       <div class="form-group">
         <label for="login-email">Correo Electrónico</label>
         <input type="email" id="login-email" required>
       </div>
-
       <!-- Contraseña -->
       <div class="form-group" style="position: relative;">
         <label for="login-password">Contraseña</label>
         <input type="password" id="login-password" required>
-
         <!-- Ícono para mostrar/ocultar contraseña -->
         <i class="fa-solid fa-eye" id="togglePassword"
           style="position: absolute; right: 10px; top: 38px; cursor: pointer; color: #666;"></i>
       </div>
-
       <!-- Botones lado a lado -->
       <div class="login-buttons">
-
         <!-- Botón Iniciar Sesión -->
         <button type="submit" class="login-btn">Iniciar Sesión</button>
-
         <!-- Botón Google -->
         <button type="button" class="google-btn" id="btn-google">
           <!-- SVG del logo de Google -->
@@ -188,102 +168,33 @@
           </svg>
           Iniciar sesión con Google
         </button>
-
       </div>
+
+    
 
       <!-- Olvidé contraseña -->
       <p class="forgot-password">
         <a href="#">¿Olvidaste tu contraseña?</a>
       </p>
-
     </form>
-
     <!-- Registro -->
     <p style="text-align: center; margin-top: 1rem;">
       <span>¿No tienes cuenta?</span>
       <a href="#" id="go-to-register">Regístrate aquí</a>
     </p>
-
   </div>
 </section>
 
 
 
-<!-- ===================================================== -->
-<!-- ========== MODAL GOOGLE LOGIN (ESTILO GOOGLE) ======== -->
-<!-- ===================================================== -->
-<div id="google-modal" class="modal">
+<!-- Modal para código de verificación -->
+<div id="modalCodigo" class="modal" style="display:none;">
   <div class="modal-content">
-
-    <span class="close">&times;</span>
-
-    <div class="login-container">
-      <div class="login-card">
-
-        <!-- Logo Google -->
-        <svg class="brand-logo" width="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-          <path fill="#EA4335"
-            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.02 17.74 9.5 24 9.5z" />
-          <path fill="#4285F4"
-            d="M46.5 24.5c0-1.57-.15-3.09-.45-4.5H24v9h12.65c-.55 2.96-2.25 5.48-4.81 7.18l7.49 5.82C43.77 37.61 46.5 31.51 46.5 24.5z" />
-          <path fill="#FBBC05"
-            d="M10.54 28.41A14.43 14.43 0 0 1 9.5 24c0-1.53.26-3.01.73-4.41l-7.98-6.19A23.85 23.85 0 0 0 0 24c0 3.89.93 7.56 2.56 10.86l7.98-6.45z" />
-          <path fill="#34A853"
-            d="M24 48c6.48 0 11.99-2.15 15.98-5.85l-7.49-5.82C30.26 38.29 27.24 39.5 24 39.5c-6.27 0-11.57-3.52-13.46-8.91l-7.98 6.45C6.51 42.62 14.62 48 24 48z" />
-        </svg>
-
-        <h2>Elegir una cuenta</h2>
-        <p class="subtitle">para continuar</p>
-
-        <!-- Cuenta guardada -->
-        <div class="account-option">
-          <img src="perfil.jpg" class="profile-pic" alt="Foto">
-          <div class="info">
-            <span class="name">Gabriela Garay</span>
-            <span class="email">amayagabriela073@gmail.com</span>
-          </div>
-        </div>
-
-        <!-- BOTÓN CORREGIDO CON ÍCONO -->
-        <div class="other-account" id="btn-use-account">
-
-          <!-- Ícono de usuario estilo Google -->
-          <svg class="icon-user" width="22" height="22" viewBox="0 0 24 24">
-            <path fill="#ffffff"
-              d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
-          </svg>
-
-          <span>Usar otra cuenta</span>
-        </div>
-
-        <p class="footer-text">
-          Antes de continuar, revisa nuestra 
-          <a href="#">política de privacidad</a>
-          y
-          <a href="#">condiciones del servicio</a>.
-        </p>
-
-      </div>
-    </div>
-
+    <h2>Introduce el código enviado a tu correo</h2>
+    <input type="text" id="codigoInput" placeholder="Código de verificación">
+    <button id="btnVerificarCodigo">Verificar</button>
   </div>
 </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -296,12 +207,10 @@
         <label for="register-name">Nombre Completo</label>
         <input type="text" id="register-name" required>
       </div>
-
       <div class="form-group">
         <label for="register-email">Correo Electrónico</label>
         <input type="email" id="register-email" required>
       </div>
-
       <!-- Campo Contraseña con ícono -->
       <div class="form-group">
         <label for="register-password">Contraseña</label>
@@ -310,7 +219,6 @@
           <i class="fa-solid fa-eye" id="toggleRegisterPassword"></i>
         </div>
       </div>
-
       <!-- Campo Confirmar Contraseña con ícono -->
       <div class="form-group">
         <label for="register-confirm">Confirmar Contraseña</label>
@@ -319,23 +227,18 @@
           <i class="fa-solid fa-eye" id="toggleRegisterConfirm"></i>
         </div>
       </div>
-
       <button type="submit" class="btn">Crear Cuenta</button>
     </form>
-
     <p style="text-align: center; margin-top: 1rem;">
       <span>¿Ya tienes cuenta?</span>
       <a href="#" id="go-to-login">Inicia sesión aquí</a>
     </p>
   </div>
 </section>
-
 <!-- Font Awesome para el ícono del ojo -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
-        <!-- Sección Catálogo -->
+        
+<!-- Sección Catálogo -->
         <section id="catalogo">
             <h2>Catálogo de Productos</h2>
             <div class="catalog-container">
@@ -386,7 +289,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Sección Perfil de Usuario -->
         <section id="perfil">
             <h1>Perfil de Usuario</h1>
@@ -434,40 +336,30 @@
             </div>
         </section>
 
-
+        
 
 <!-- Sección Carrito de Compras -->
 <section id="carrito">
     <h2>Carrito de Compras</h2>
-
     <div class="cart-container">
-
         <div class="cart-items">
             <!-- Los productos del carrito se cargarán con JavaScript -->
             <p>Tu carrito está vacío</p>
         </div>
-
         <div class="cart-total">
             <span>Total</span>: $<span id="cart-total-amount">0.00</span>
         </div>
-
         <!-- Botones izquierda y derecha -->
         <div class="cart-buttons">
             <button class="btn btn-seguir-comprando" id="back-to-catalog">
                 Seguir Comprando
             </button>
-
             <button class="btn btn-proceso-pago" id="checkout-btn">
                 Proceder al Pago
             </button>
         </div>
-
     </div>
 </section>
-
-
-
-
 
 
 <!-- Modal de Proceso de Pago -->
@@ -483,14 +375,12 @@
         <label style="display:block; margin-bottom:15px; color:#1E3A8A;">
             <input type="radio" name="payment-method" value="tarjeta"> Tarjeta
         </label>
-
         <div id="card-info" style="margin-top:10px; display:none;">
             <input type="text" placeholder="Nombre del titular" style="width:100%; margin-bottom:10px; border-radius:8px; padding:8px; border:1px solid #1E3A8A; background:#fff; color:#1E3A8A;">
             <input type="text" placeholder="Número de tarjeta" maxlength="16" style="width:100%; margin-bottom:10px; border-radius:8px; padding:8px; border:1px solid #1E3A8A; background:#fff; color:#1E3A8A;">
             <input type="text" placeholder="Fecha de expiración (MM/AA)" style="width:100%; margin-bottom:10px; border-radius:8px; padding:8px; border:1px solid #1E3A8A; background:#fff; color:#1E3A8A;">
             <input type="text" placeholder="CVV" maxlength="3" style="width:100%; margin-bottom:10px; border-radius:8px; padding:8px; border:1px solid #1E3A8A; background:#fff; color:#1E3A8A;">
         </div>
-
         <div style="display:flex; justify-content:center; gap:10px; margin-top:20px;">
             <button id="confirm-payment" 
                 style="background:#1E3A8A; color:#F3F4F6 ; border:none; padding:10px 20px; border-radius:10px; cursor:pointer; font-weight:bold; transition:0.3s;">
@@ -503,8 +393,6 @@
         </div>
     </div>
 </div>
-
-
         <!-- Sección Visualización de Producto (mantenida por compatibilidad) -->
         <section id="producto">
             <div id="product-details">
@@ -512,18 +400,25 @@
             </div>
         </section>
     </main>
-
    <!-- Modal para detalles del producto -->
 <div id="product-modal" class="modal">
     <div class="modal-content">
+
+        <!-- Botón cerrar -->
+        <span class="close-modal">&times;</span>
 
         <!-- Contenedor interno -->
         <div id="modal-product-details">
             <!-- Los detalles del producto se cargarán aquí con JavaScript -->
         </div>
-
     </div>
 </div>
+
+
+
+
+
+
 
 
 
@@ -558,14 +453,13 @@
             </div>
         </div>
     </footer>
-
     
     <!-- Scripts separados -->
     <script src="data.js"></script>
     <script src="state.js"></script>
     <script src="navigation.js"></script>
     <script src="products.js"></script>
-    <script src="modal-pago.js"></script>
+    <script src="modal.js"></script>
     <script src="cart.js"></script>
     <script src="auth.js"></script>
     <script src="utils.js"></script>
@@ -575,8 +469,15 @@
     <script src="metodo-pago.js"></script>
     <script src="visualizacion-contraseña.js"></script>
     <script src="google.js"></script>
+    <script src="modal-pago.js"></script>
     <script src="modal-producto.js"></script>
-    
+    <script src="verificacion-codigo.js"></script>
+
+  
+   <script type="module" src="app.js"></script>
+   <script type="module" src="firebase.js"></script>
+   <script type="module" src="google-auth.js"></script>
+
 
 </body>
 </html>

@@ -1,18 +1,48 @@
-document.getElementById("formulario").addEventListener("submit", function(e) {
-    e.preventDefault();
+import {
+  auth,
+  provider,
+  signInWithPopup,
+  signOut
+} from "./firebase.js";
 
-    let datos = new FormData(this);
+// ELEMENTOS
+const btnGoogle = document.getElementById("btnGoogle");
+const btnLogout = document.getElementById("btnLogout");
 
-    fetch("enviarCorreo.php", {
-        method: "POST",
-        body: datos
-    })
-    .then(res => res.text())
-    .then(data => {
-        if (data == "OK") {
-            document.getElementById("respuesta").innerHTML = "📩 Correo enviado correctamente";
-        } else {
-            document.getElementById("respuesta").innerHTML = "❌ Error al enviar el correo";
-        }
-    });
+const userInfo = document.getElementById("userInfo");
+const userPhoto = document.getElementById("userPhoto");
+const userName = document.getElementById("userName");
+const userEmail = document.getElementById("userEmail");
+
+// LOGIN GOOGLE
+btnGoogle.addEventListener("click", async () => {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+
+    userInfo.style.display = "block";
+
+    userPhoto.src = user.photoURL;
+    userName.textContent = user.displayName;
+    userEmail.textContent = user.email;
+
+    console.log("Usuario logueado:", user);
+
+  } catch (error) {
+    console.error("Error al iniciar sesión:", error);
+  }
 });
+
+// LOGOUT
+btnLogout.addEventListener("click", async () => {
+  try {
+    await signOut(auth);
+    userInfo.style.display = "none";
+    alert("Cerraste sesión");
+  } catch (error) {
+    console.error("Error al cerrar sesión:", error);
+  }
+});
+
+
+
